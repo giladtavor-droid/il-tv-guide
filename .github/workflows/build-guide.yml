@@ -1,0 +1,45 @@
+# Twice a day: build the guide (build.py) and publish it to the "guide" release, at a fixed address:
+#   https://github.com/giladtavor-droid/il-tv-guide/releases/download/guide/il-week.xml.gz
+# A run with too few programmes (a source down) fails before publishing, so yesterday's file stays.
+# report.json is also committed, so the repo is never idle long enough for GitHub to stop the schedule.
+name: build-guide
+
+on:
+  schedule:
+    - cron: "30 1 * * *"
+    - cron: "30 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-guide
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build
+        run: python build.py dist
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view guide >/dev/null 2>&1 || \
+            gh release create guide --title "לוח שידורים ישראלי" --notes "il-week.xml.gz מתעדכן פעמיים ביום. report.json: כמה ערוצים ותוכניות מכל מקור."
+          gh release upload guide dist/il-week.xml.gz dist/report.json --clobber
+      - name: Keep the schedule alive
+        run: |
+          cp dist/report.json report.json
+          git config user.name "il-tv-guide"
+          git config user.email "il-tv-guide@users.noreply.github.com"
+          git add report.json
+          git diff --cached --quiet || git commit -m "chore: guide report $(date -u +%F' '%H:%M)"
+          git push
