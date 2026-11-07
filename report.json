@@ -1,27 +1,27 @@
 {
- "built": "2026-11-07T07:37:11+00:00",
+ "built": "2026-11-07T18:11:45+00:00",
  "sources": {
   "freetv": {
    "channels": 72,
    "programmes": 26711,
-   "seconds": 15.5,
+   "seconds": 14.3,
    "until": "2026-11-22T23:03+00:00"
   },
   "cellcom": {
    "channels": 145,
-   "programmes": 33889,
-   "seconds": 20.6,
-   "until": "2026-11-23T08:00+00:00"
+   "programmes": 32177,
+   "seconds": 15.9,
+   "until": "2026-11-23T19:00+00:00"
   },
   "yes": {
    "channels": 131,
-   "programmes": 31032,
-   "seconds": 42.4,
+   "programmes": 31074,
+   "seconds": 41.5,
    "until": "2026-11-14T00:46+00:00"
   }
  },
  "channels": 295,
- "programmes": 78045,
+ "programmes": 76840,
  "per_channel": {
   "baby": {
    "source": "yes",
@@ -301,7 +301,7 @@
   "x.carousel": {
    "source": "yes",
    "title": "Carousel",
-   "until": "2026-11-13T04:00+00:00"
+   "until": "2026-11-13T22:35+00:00"
   },
   "x.cgtn": {
    "source": "yes",
@@ -621,7 +621,7 @@
   "x.i24newsfrench": {
    "source": "cellcom",
    "title": "i24NEWS FRENCH",
-   "until": "2026-11-23T08:00+00:00"
+   "until": "2026-11-23T19:00+00:00"
   },
   "x.idxtra": {
    "source": "yes",
@@ -836,7 +836,7 @@
   "x.raz3": {
    "source": "yes",
    "title": "RAZ 3 (Kvartal)",
-   "until": "2026-11-13T04:15+00:00"
+   "until": "2026-11-13T23:00+00:00"
   },
   "x.realitychannel": {
    "source": "yes",
