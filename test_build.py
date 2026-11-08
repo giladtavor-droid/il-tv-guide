@@ -16,18 +16,36 @@ YES_ITEMS = [
 class YesNumberAliases(unittest.TestCase):
     def test_numbers_become_aliases_by_canon_key(self):
         a = build.yes_number_aliases(YES_ITEMS)
-        self.assertEqual(a["reshet13"], ["yes 13", "YES 13"])
-        self.assertEqual(a["kan11"], ["yes 11", "YES 11"])
+        self.assertEqual(a["reshet13"], ["yes 13"])
+        self.assertEqual(a["kan11"], ["yes 11"])
 
     def test_duplicate_number_goes_to_both_channels(self):
         a = build.yes_number_aliases(YES_ITEMS)
-        self.assertEqual(a[build.canon_of("Big Brother HD")], ["yes 26", "YES 26"])
-        self.assertEqual(a[build.canon_of("yes 7 October")], ["yes 26", "YES 26"])
+        self.assertEqual(a[build.canon_of("Big Brother HD")], ["yes 26"])
+        self.assertEqual(a[build.canon_of("yes 7 October")], ["yes 26"])
 
     def test_no_number_and_radio_are_skipped(self):
         a = build.yes_number_aliases(YES_ITEMS)
         self.assertNotIn(build.canon_of("Some Pack"), a)
         self.assertNotIn(build.canon_of("Radio X"), a)
+
+
+class DisplayNames(unittest.TestCase):
+    def test_hebrew_first_then_english_then_aliases(self):
+        names = build.display_names("kan11", "ערוץ 11", {"kan11": ["yes 11"]})
+        self.assertEqual(names[0], "כאן 11")
+        self.assertEqual(names[-1], "yes 11")
+        self.assertIn("Kan 11", names)
+        self.assertIn("ערוץ 11", names)
+        self.assertEqual(len(names), len({n.lower() for n in names}))
+
+    def test_unknown_key_keeps_source_title_first(self):
+        self.assertEqual(build.display_names("x.yesmoviesaction", "yes Movies Action", {"x.yesmoviesaction": ["yes 2"]}),
+                         ["yes Movies Action", "yes 2"])
+
+    def test_case_duplicate_dropped(self):
+        names = build.display_names("hop", "HOP", {})
+        self.assertEqual([n.lower() for n in names].count("hop"), 1)
 
 
 if __name__ == "__main__":

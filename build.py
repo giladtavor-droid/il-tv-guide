@@ -117,9 +117,35 @@ def canon_of(title):
 
 # ------------------------------------------------------------------ מספרי הערוצים של yes
 
-# מפתח -> ["yes N", "YES N"]: מספר הערוץ ב-yes כשם תצוגה. ספקי IPTV קוראים לערוצים "IL: YES 13" לפי המספור הזה,
+# מפתח -> ["yes N"]: מספר הערוץ ב-yes כשם תצוגה (הרישיות לא משנה: האפליקציות משוות באותיות קטנות). ספקי IPTV קוראים לערוצים "IL: YES 13" לפי המספור הזה,
 # והנרמול של האפליקציה הופך גם "IL: YES 13" וגם "yes 13" לאותו מפתח. נאסף מכל ערוצי yes, גם כאלה שהלוח שלהם נלקח ממקור אחר.
 YES_ALIASES = {}
+
+
+HEBREW = re.compile("[֐-׿]")
+
+
+def display_names(key, title, aliases):
+    """שמות התצוגה של ערוץ בקובץ: השם העברי ראשון, אחריו שמות CANON ושם המקור, ובסוף כינויי המספר של yes. בלי כפילויות."""
+    out = []
+    seen = set()
+
+    def add(n):
+        n = n.strip()
+        if n and n.lower() not in seen:
+            seen.add(n.lower())
+            out.append(n)
+
+    for n in (CANON[key][0] if key in CANON else []):
+        add(n)
+    add(title)
+    for i, n in enumerate(out):
+        if HEBREW.search(n):
+            out.insert(0, out.pop(i))
+            break
+    for n in aliases.get(key, []):
+        add(n)
+    return out
 
 
 def yes_number_aliases(items):
@@ -131,7 +157,7 @@ def yes_number_aliases(items):
         n = str(c.get("number") or "").strip()
         if not n.isdigit():
             continue
-        out.setdefault(canon_of(c.get("title") or ""), ["yes %s" % n, "YES %s" % n])
+        out.setdefault(canon_of(c.get("title") or ""), ["yes %s" % n])
     return out
 
 
@@ -300,15 +326,13 @@ def xmltv_time(t):
     return t.strftime("%Y%m%d%H%M%S +0000")
 
 
-def write(chosen, path, now):
+def write(chosen, path, now, aliases):
     keep_from = now - dt.timedelta(hours=6)
     with gzip.open(path, "wt", encoding="utf-8", compresslevel=9) as out:
         out.write('<?xml version="1.0" encoding="UTF-8"?>\n<tv generator-info-name="il-tv-guide">\n')
         for ch in chosen:
             cid = "il-week." + ch.key.replace("x.", "x-")
-            names = list(CANON[ch.key][0]) if ch.key in CANON else []
-            if ch.title not in names:
-                names.append(ch.title)
+            names = display_names(ch.key, ch.title, aliases)
             out.write("<channel id=%s>" % quoteattr(cid))
             for n in names:
                 out.write("<display-name lang=\"he\">%s</display-name>" % escape(n))
@@ -371,7 +395,7 @@ def main():
         print("too few programmes (%d < %d): nothing written" % (total, MIN_PROGRAMMES), file=sys.stderr)
         sys.exit(1)
     tmp = os.path.join(out_dir, "il-week.xml.gz.part")
-    write(chosen, tmp, now)
+    write(chosen, tmp, now, YES_ALIASES)
     os.replace(tmp, os.path.join(out_dir, "il-week.xml.gz"))
     with open(os.path.join(out_dir, "report.json"), "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=1)
