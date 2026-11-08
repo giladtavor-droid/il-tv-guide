@@ -1,27 +1,552 @@
 {
- "built": "2026-11-08T18:26:45+00:00",
+ "built": "2026-11-08T21:12:00+00:00",
  "sources": {
   "freetv": {
    "channels": 71,
    "programmes": 26864,
-   "seconds": 10.5,
+   "seconds": 12.9,
    "until": "2026-11-23T23:03+00:00"
   },
   "cellcom": {
-   "channels": 145,
-   "programmes": 35064,
-   "seconds": 15.9,
-   "until": "2026-11-24T19:00+00:00"
+   "channels": 144,
+   "programmes": 33448,
+   "seconds": 14.7,
+   "until": "2026-11-24T21:30+00:00"
   },
   "yes": {
-   "channels": 127,
-   "programmes": 28989,
-   "seconds": 34.5,
+   "channels": 128,
+   "programmes": 29568,
+   "seconds": 37.1,
    "until": "2026-11-15T00:35+00:00"
   }
  },
+ "yes_numbers": {
+  "yesmoviesdrama": [
+   "yes 1"
+  ],
+  "yesmoviesaction": [
+   "yes 2"
+  ],
+  "yesmoviescomedy": [
+   "yes 3"
+  ],
+  "yesisraelicinema": [
+   "yes 4"
+  ],
+  "x.yes+cinema": [
+   "yes 5"
+  ],
+  "x.yes+diamonds": [
+   "yes 6"
+  ],
+  "x.yes+dark": [
+   "yes 7"
+  ],
+  "yesdocu": [
+   "yes 8"
+  ],
+  "ch9": [
+   "yes 9"
+  ],
+  "x.economics10": [
+   "yes 10"
+  ],
+  "kan11": [
+   "yes 11",
+   "yes 311",
+   "yes 511"
+  ],
+  "keshet12": [
+   "yes 12",
+   "yes 312",
+   "yes 612"
+  ],
+  "reshet13": [
+   "yes 13",
+   "yes 313"
+  ],
+  "now14": [
+   "yes 14"
+  ],
+  "i24he": [
+   "yes 15"
+  ],
+  "ch16": [
+   "yes 16"
+  ],
+  "x.turkishdrama": [
+   "yes 17"
+  ],
+  "yestvdrama": [
+   "yes 18"
+  ],
+  "yestvaction": [
+   "yes 19"
+  ],
+  "yestvcomedy": [
+   "yes 20"
+  ],
+  "x.turkishdrama2": [
+   "yes 21"
+  ],
+  "x.turkishdrama3": [
+   "yes 22"
+  ],
+  "ch23": [
+   "yes 23"
+  ],
+  "music24": [
+   "yes 24"
+  ],
+  "x.mediterraneanchannel": [
+   "yes 25"
+  ],
+  "x.bigbrother": [
+   "yes 26"
+  ],
+  "x.yes7october": [
+   "yes 26"
+  ],
+  "x.humorchannel": [
+   "yes 27"
+  ],
+  "x.humorchannel2": [
+   "yes 28"
+  ],
+  "x.classiccomedies": [
+   "yes 29"
+  ],
+  "x.israelidrama": [
+   "yes 30"
+  ],
+  "x.e": [
+   "yes 31"
+  ],
+  "x.mediterraneanplus": [
+   "yes 32"
+  ],
+  "makan": [
+   "yes 33"
+  ],
+  "x.vivalovestory": [
+   "yes 34"
+  ],
+  "x.vivatelenovelas": [
+   "yes 35"
+  ],
+  "x.vivaistanbul": [
+   "yes 36"
+  ],
+  "x.vivavintage": [
+   "yes 37"
+  ],
+  "x.mediterraneanchannel2": [
+   "yes 38"
+  ],
+  "x.spanishdrama1": [
+   "yes 39"
+  ],
+  "x.spanishdrama2": [
+   "yes 40"
+  ],
+  "x.nationalg": [
+   "yes 41"
+  ],
+  "discovery": [
+   "yes 42"
+  ],
+  "x.nationalgwild": [
+   "yes 43"
+  ],
+  "history": [
+   "yes 44",
+   "yes 45"
+  ],
+  "x.worldaction1": [
+   "yes 46"
+  ],
+  "x.animalplanet": [
+   "yes 47"
+  ],
+  "daystar": [
+   "yes 48"
+  ],
+  "one2": [
+   "yes 49"
+  ],
+  "one": [
+   "yes 50"
+  ],
+  "sport1": [
+   "yes 51"
+  ],
+  "sport2": [
+   "yes 52"
+  ],
+  "sport3": [
+   "yes 53"
+  ],
+  "sport4": [
+   "yes 54"
+  ],
+  "sport5": [
+   "yes 55"
+  ],
+  "sport5plus": [
+   "yes 56"
+  ],
+  "sport5gold": [
+   "yes 57"
+  ],
+  "sport5live": [
+   "yes 58"
+  ],
+  "sport5stars": [
+   "yes 59"
+  ],
+  "sport5max": [
+   "yes 60"
+  ],
+  "eurosport1": [
+   "yes 61"
+  ],
+  "eurosport2": [
+   "yes 62"
+  ],
+  "x.motorvision": [
+   "yes 63"
+  ],
+  "sport6": [
+   "yes 64"
+  ],
+  "x.homeandfamily": [
+   "yes 65"
+  ],
+  "x.designchannel": [
+   "yes 66"
+  ],
+  "x.vacationchannel": [
+   "yes 67"
+  ],
+  "x.lovechannel": [
+   "yes 68"
+  ],
+  "x.stylechannel": [
+   "yes 69"
+  ],
+  "x.realitychannel": [
+   "yes 70"
+  ],
+  "x.tvgameshows": [
+   "yes 71"
+  ],
+  "x.travelchannel": [
+   "yes 72"
+  ],
+  "foodchannel": [
+   "yes 73"
+  ],
+  "x.lifestyle": [
+   "yes 74"
+  ],
+  "x.dailydrama": [
+   "yes 75"
+  ],
+  "x.beautyz": [
+   "yes 76"
+  ],
+  "yesmovieskids": [
+   "yes 77"
+  ],
+  "yoyo": [
+   "yes 78"
+  ],
+  "x.childhoodsongs": [
+   "yes 79"
+  ],
+  "kanedu": [
+   "yes 80"
+  ],
+  "baby": [
+   "yes 81"
+  ],
+  "hop": [
+   "yes 82"
+  ],
+  "hopchildhood": [
+   "yes 83"
+  ],
+  "disneyjunior": [
+   "yes 84"
+  ],
+  "nickjunior": [
+   "yes 85"
+  ],
+  "x.kidsstarschannel": [
+   "yes 86"
+  ],
+  "x.childrenchannel": [
+   "yes 87"
+  ],
+  "x.zoomtoon": [
+   "yes 88"
+  ],
+  "disney": [
+   "yes 89"
+  ],
+  "x.zoom": [
+   "yes 90"
+  ],
+  "nickelodeon": [
+   "yes 91"
+  ],
+  "x.wiz": [
+   "yes 92"
+  ],
+  "junior": [
+   "yes 93"
+  ],
+  "teennick": [
+   "yes 94"
+  ],
+  "luli": [
+   "yes 95"
+  ],
+  "x.childhood": [
+   "yes 96"
+  ],
+  "x.hidabroot": [
+   "yes 97"
+  ],
+  "x.kehilaty": [
+   "yes 98"
+  ],
+  "knesset": [
+   "yes 99"
+  ],
+  "x.newsmax": [
+   "yes 101"
+  ],
+  "x.cnn": [
+   "yes 102"
+  ],
+  "x.skynews": [
+   "yes 103"
+  ],
+  "x.france24": [
+   "yes 104"
+  ],
+  "x.foxnews": [
+   "yes 105"
+  ],
+  "x.bloomberg": [
+   "yes 106"
+  ],
+  "x.france24fr": [
+   "yes 107"
+  ],
+  "x.cgtn": [
+   "yes 108"
+  ],
+  "x.mediterraneanmovies2": [
+   "yes 109"
+  ],
+  "x.worldaction2": [
+   "yes 110"
+  ],
+  "x.mediterraneanmovies1": [
+   "yes 111"
+  ],
+  "x.indiandrama1": [
+   "yes 112"
+  ],
+  "x.indiandrama2": [
+   "yes 113"
+  ],
+  "x.bollywoodmovies": [
+   "yes 114"
+  ],
+  "x.bollywoodseries": [
+   "yes 115"
+  ],
+  "x.healthchannel": [
+   "yes 116"
+  ],
+  "ego": [
+   "yes 117"
+  ],
+  "i24en": [
+   "yes 118"
+  ],
+  "i24ar": [
+   "yes 119"
+  ],
+  "x.rtl": [
+   "yes 120"
+  ],
+  "x.vox": [
+   "yes 121"
+  ],
+  "x.sat1": [
+   "yes 122"
+  ],
+  "x.gtv": [
+   "yes 123"
+  ],
+  "x.cgtndoc": [
+   "yes 124"
+  ],
+  "x.tve": [
+   "yes 125"
+  ],
+  "x.metv": [
+   "yes 126"
+  ],
+  "x.protv": [
+   "yes 127"
+  ],
+  "x.zeetv": [
+   "yes 128"
+  ],
+  "x.mediaset": [
+   "yes 129"
+  ],
+  "x.france3": [
+   "yes 131"
+  ],
+  "x.france2": [
+   "yes 132"
+  ],
+  "x.arte": [
+   "yes 133"
+  ],
+  "x.ietv": [
+   "yes 140"
+  ],
+  "x.halatv": [
+   "yes 141"
+  ],
+  "x.eurostar": [
+   "yes 146"
+  ],
+  "x.rtm": [
+   "yes 147"
+  ],
+  "x.jimjam": [
+   "yes 148"
+  ],
+  "x.channel1rus": [
+   "yes 181"
+  ],
+  "x.rtr": [
+   "yes 182"
+  ],
+  "x.domkinopremium": [
+   "yes 183"
+  ],
+  "x.nashekino": [
+   "yes 184"
+  ],
+  "x.rentv": [
+   "yes 185"
+  ],
+  "x.vremya": [
+   "yes 186"
+  ],
+  "x.telecafe": [
+   "yes 187"
+  ],
+  "x.bober": [
+   "yes 188"
+  ],
+  "x.ctc": [
+   "yes 191"
+  ],
+  "x.ntvmir": [
+   "yes 192"
+  ],
+  "x.tvci": [
+   "yes 195"
+  ],
+  "x.1+1": [
+   "yes 196"
+  ],
+  "x.raz3": [
+   "yes 197"
+  ],
+  "x.shansontv": [
+   "yes 198"
+  ],
+  "x.domkino": [
+   "yes 199"
+  ],
+  "x.musicil": [
+   "yes 200"
+  ],
+  "x.israelistage": [
+   "yes 201"
+  ],
+  "x.mtv00s": [
+   "yes 202"
+  ],
+  "x.mtvseries": [
+   "yes 203"
+  ],
+  "x.mtv": [
+   "yes 204"
+  ],
+  "x.tlc": [
+   "yes 205"
+  ],
+  "x.mtvhits": [
+   "yes 206"
+  ],
+  "x.classica": [
+   "yes 207"
+  ],
+  "x.mezzo": [
+   "yes 208"
+  ],
+  "x.mezzolive": [
+   "yes 209"
+  ],
+  "x.greekmusic": [
+   "yes 210"
+  ],
+  "foody": [
+   "yes 212"
+  ],
+  "x.musicboxmuzon": [
+   "yes 213"
+  ],
+  "x.idxtra": [
+   "yes 215"
+  ],
+  "x.carousel": [
+   "yes 220"
+  ],
+  "x.doc": [
+   "yes 221"
+  ],
+  "x.popupx": [
+   "yes 222"
+  ],
+  "x.jimjamrus": [
+   "yes 223"
+  ],
+  "oneedge": [
+   "yes 501"
+  ],
+  "onedoco": [
+   "yes 502"
+  ],
+  "sport54k": [
+   "yes 560"
+  ]
+ },
+ "yes_numbers_from_previous_run": false,
  "channels": 294,
- "programmes": 78720,
+ "programmes": 77827,
  "per_channel": {
   "baby": {
    "source": "freetv",
@@ -48,6 +573,26 @@
    "title": "DAYSTAR",
    "until": "2026-11-20T22:00+00:00"
   },
+  "discovery": {
+   "source": "cellcom",
+   "title": "Discovery",
+   "until": "2026-11-15T22:05+00:00"
+  },
+  "disney": {
+   "source": "yes",
+   "title": "Disney HD",
+   "until": "2026-11-14T22:06+00:00"
+  },
+  "disneyjunior": {
+   "source": "yes",
+   "title": "Disney Junior",
+   "until": "2026-11-14T22:10+00:00"
+  },
+  "ego": {
+   "source": "yes",
+   "title": "EGO",
+   "until": "2026-11-14T22:28+00:00"
+  },
   "eurosport1": {
    "source": "cellcom",
    "title": "Eurosport 1",
@@ -58,10 +603,30 @@
    "title": "Eurosport 2",
    "until": "2026-11-21T21:59+00:00"
   },
+  "foodchannel": {
+   "source": "yes",
+   "title": "Food Channel",
+   "until": "2026-11-14T22:21+00:00"
+  },
   "foody": {
    "source": "freetv",
    "title": "FOODY",
    "until": "2026-11-15T22:00+00:00"
+  },
+  "history": {
+   "source": "yes",
+   "title": "History SD",
+   "until": "2026-11-14T22:16+00:00"
+  },
+  "hop": {
+   "source": "yes",
+   "title": "HOP",
+   "until": "2026-11-15T00:35+00:00"
+  },
+  "hopchildhood": {
+   "source": "yes",
+   "title": "HOP! Childhood",
+   "until": "2026-11-14T22:00+00:00"
   },
   "i24ar": {
    "source": "yes",
@@ -122,6 +687,16 @@
    "source": "freetv",
    "title": "Music 24",
    "until": "2026-11-20T22:00+00:00"
+  },
+  "nickelodeon": {
+   "source": "yes",
+   "title": "Nickelodeon",
+   "until": "2026-11-14T22:04+00:00"
+  },
+  "nickjunior": {
+   "source": "yes",
+   "title": "NICK Junior",
+   "until": "2026-11-14T22:07+00:00"
   },
   "now14": {
    "source": "freetv",
@@ -212,6 +787,11 @@
    "source": "cellcom",
    "title": "ספורט 6",
    "until": "2026-11-11T21:59+00:00"
+  },
+  "teennick": {
+   "source": "yes",
+   "title": "TeenNick",
+   "until": "2026-11-14T22:12+00:00"
   },
   "x.": {
    "source": "cellcom",
@@ -363,21 +943,6 @@
    "title": "Design Channel (DIY)",
    "until": "2026-11-14T22:44+00:00"
   },
-  "x.discovery": {
-   "source": "cellcom",
-   "title": "Discovery",
-   "until": "2026-11-15T22:05+00:00"
-  },
-  "x.disney": {
-   "source": "yes",
-   "title": "Disney HD",
-   "until": "2026-11-14T22:06+00:00"
-  },
-  "x.disneyjunior": {
-   "source": "yes",
-   "title": "Disney Junior",
-   "until": "2026-11-14T22:10+00:00"
-  },
   "x.domkino": {
    "source": "cellcom",
    "title": "Дом Кино - dom kino",
@@ -401,7 +966,7 @@
   "x.e": {
    "source": "cellcom",
    "title": "E!",
-   "until": "2026-11-24T18:31+00:00"
+   "until": "2026-11-24T21:24+00:00"
   },
   "x.eco99fm": {
    "source": "cellcom",
@@ -413,11 +978,6 @@
    "title": "Economics 10",
    "until": "2026-11-14T22:30+00:00"
   },
-  "x.ego": {
-   "source": "yes",
-   "title": "EGO",
-   "until": "2026-11-14T22:28+00:00"
-  },
   "x.eurostar": {
    "source": "yes",
    "title": "EUROSTAR",
@@ -427,11 +987,6 @@
    "source": "freetv",
    "title": "FOMO",
    "until": "2026-11-15T22:00+00:00"
-  },
-  "x.foodchannel": {
-   "source": "yes",
-   "title": "Food Channel",
-   "until": "2026-11-14T22:21+00:00"
   },
   "x.foodnetwork": {
    "source": "cellcom",
@@ -578,25 +1133,10 @@
    "title": "Hidabroot",
    "until": "2026-11-14T22:00+00:00"
   },
-  "x.history": {
-   "source": "yes",
-   "title": "History SD",
-   "until": "2026-11-14T22:16+00:00"
-  },
   "x.homeandfamily": {
    "source": "yes",
    "title": "Home and Family",
    "until": "2026-11-14T22:33+00:00"
-  },
-  "x.hop": {
-   "source": "yes",
-   "title": "HOP",
-   "until": "2026-11-15T00:35+00:00"
-  },
-  "x.hopchildhood": {
-   "source": "yes",
-   "title": "HOP! Childhood",
-   "until": "2026-11-14T22:00+00:00"
   },
   "x.humorchannel": {
    "source": "yes",
@@ -621,7 +1161,7 @@
   "x.i24newsfrench": {
    "source": "cellcom",
    "title": "i24NEWS FRENCH",
-   "until": "2026-11-24T19:00+00:00"
+   "until": "2026-11-24T21:30+00:00"
   },
   "x.idxtra": {
    "source": "yes",
@@ -686,7 +1226,7 @@
   "x.lovechannel": {
    "source": "yes",
    "title": "Love Channel",
-   "until": "2026-11-14T03:38+00:00"
+   "until": "2026-11-14T22:34+00:00"
   },
   "x.lubimoyakino": {
    "source": "cellcom",
@@ -798,16 +1338,6 @@
    "title": "NEWSMAX",
    "until": "2026-11-16T21:59+00:00"
   },
-  "x.nickelodeon": {
-   "source": "yes",
-   "title": "Nickelodeon",
-   "until": "2026-11-14T22:04+00:00"
-  },
-  "x.nickjunior": {
-   "source": "yes",
-   "title": "NICK Junior",
-   "until": "2026-11-14T22:07+00:00"
-  },
   "x.ntvmir": {
    "source": "cellcom",
    "title": "NTV MIR",
@@ -902,11 +1432,6 @@
    "source": "yes",
    "title": "Style Channel (Fashion IL)",
    "until": "2026-11-14T22:49+00:00"
-  },
-  "x.teennick": {
-   "source": "yes",
-   "title": "TeenNick",
-   "until": "2026-11-14T22:12+00:00"
   },
   "x.telecafe": {
    "source": "yes",
@@ -1033,51 +1558,6 @@
    "title": "yes+ Love",
    "until": "2026-11-14T23:43+00:00"
   },
-  "x.yesdocu": {
-   "source": "yes",
-   "title": "yes Docu HD",
-   "until": "2026-11-14T22:55+00:00"
-  },
-  "x.yesisraelicinema": {
-   "source": "yes",
-   "title": "yes Israeli Cinema HD IP only",
-   "until": "2026-11-14T22:29+00:00"
-  },
-  "x.yesmoviesaction": {
-   "source": "yes",
-   "title": "yes Movies Action",
-   "until": "2026-11-14T23:32+00:00"
-  },
-  "x.yesmoviescomedy": {
-   "source": "yes",
-   "title": "yes Movies Comedy",
-   "until": "2026-11-14T22:55+00:00"
-  },
-  "x.yesmoviesdrama": {
-   "source": "yes",
-   "title": "yes Movies Drama",
-   "until": "2026-11-15T00:09+00:00"
-  },
-  "x.yesmovieskids": {
-   "source": "yes",
-   "title": "yes Movies Kids",
-   "until": "2026-11-14T22:12+00:00"
-  },
-  "x.yestvaction": {
-   "source": "yes",
-   "title": "yes TV Action",
-   "until": "2026-11-14T22:25+00:00"
-  },
-  "x.yestvcomedy": {
-   "source": "yes",
-   "title": "yes TV Comedy",
-   "until": "2026-11-14T22:00+00:00"
-  },
-  "x.yestvdrama": {
-   "source": "yes",
-   "title": "yes TV Drama",
-   "until": "2026-11-14T22:12+00:00"
-  },
   "x.zeetv": {
    "source": "yes",
    "title": "ZEETV",
@@ -1089,9 +1569,9 @@
    "until": "2026-11-22T21:59+00:00"
   },
   "x.zoomtoon": {
-   "source": "cellcom",
-   "title": "ZOOM Toon",
-   "until": "2026-11-22T21:59+00:00"
+   "source": "yes",
+   "title": "ZOOM TOON",
+   "until": "2026-11-14T22:19+00:00"
   },
   "x.בית+": {
    "source": "cellcom",
@@ -1451,7 +1931,7 @@
   "x.ערוץהקומדיותהקלאסיות": {
    "source": "cellcom",
    "title": "ערוץ הקומדיות הקלאסיות",
-   "until": "2026-11-24T18:33+00:00"
+   "until": "2026-11-24T21:14+00:00"
   },
   "x.ערוץהקריוקי": {
    "source": "freetv",
@@ -1487,6 +1967,51 @@
    "source": "cellcom",
    "title": "שירי ילדותי",
    "until": "2026-11-15T21:59+00:00"
+  },
+  "yesdocu": {
+   "source": "yes",
+   "title": "yes Docu HD",
+   "until": "2026-11-14T22:55+00:00"
+  },
+  "yesisraelicinema": {
+   "source": "yes",
+   "title": "yes Israeli Cinema HD IP only",
+   "until": "2026-11-14T22:29+00:00"
+  },
+  "yesmoviesaction": {
+   "source": "yes",
+   "title": "yes Movies Action",
+   "until": "2026-11-14T23:32+00:00"
+  },
+  "yesmoviescomedy": {
+   "source": "yes",
+   "title": "yes Movies Comedy",
+   "until": "2026-11-14T22:55+00:00"
+  },
+  "yesmoviesdrama": {
+   "source": "yes",
+   "title": "yes Movies Drama",
+   "until": "2026-11-15T00:09+00:00"
+  },
+  "yesmovieskids": {
+   "source": "yes",
+   "title": "yes Movies Kids",
+   "until": "2026-11-14T22:12+00:00"
+  },
+  "yestvaction": {
+   "source": "yes",
+   "title": "yes TV Action",
+   "until": "2026-11-14T22:25+00:00"
+  },
+  "yestvcomedy": {
+   "source": "yes",
+   "title": "yes TV Comedy",
+   "until": "2026-11-14T22:00+00:00"
+  },
+  "yestvdrama": {
+   "source": "yes",
+   "title": "yes TV Drama",
+   "until": "2026-11-14T22:12+00:00"
   },
   "yoyo": {
    "source": "freetv",
