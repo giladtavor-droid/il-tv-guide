@@ -1,37 +1,37 @@
 {
- "built": "2026-11-08T07:46:59+00:00",
+ "built": "2026-11-08T18:26:45+00:00",
  "sources": {
   "freetv": {
    "channels": 71,
-   "programmes": 24387,
-   "seconds": 13.4,
+   "programmes": 26864,
+   "seconds": 10.5,
    "until": "2026-11-23T23:03+00:00"
   },
   "cellcom": {
    "channels": 145,
-   "programmes": 32278,
-   "seconds": 22.9,
-   "until": "2026-11-24T08:00+00:00"
+   "programmes": 35064,
+   "seconds": 15.9,
+   "until": "2026-11-24T19:00+00:00"
   },
   "yes": {
-   "channels": 133,
-   "programmes": 28563,
-   "seconds": 42.8,
+   "channels": 127,
+   "programmes": 28989,
+   "seconds": 34.5,
    "until": "2026-11-15T00:35+00:00"
   }
  },
  "channels": 294,
- "programmes": 72414,
+ "programmes": 78720,
  "per_channel": {
   "baby": {
-   "source": "cellcom",
-   "title": "בייבי",
+   "source": "freetv",
+   "title": "BABY",
    "until": "2026-11-15T22:00+00:00"
   },
   "ch16": {
    "source": "freetv",
    "title": "ערוץ 16",
-   "until": "2026-11-13T23:00+00:00"
+   "until": "2026-11-15T22:00+00:00"
   },
   "ch23": {
    "source": "cellcom",
@@ -44,9 +44,9 @@
    "until": "2026-11-20T22:35+00:00"
   },
   "daystar": {
-   "source": "yes",
+   "source": "freetv",
    "title": "DAYSTAR",
-   "until": "2026-11-14T22:00+00:00"
+   "until": "2026-11-20T22:00+00:00"
   },
   "eurosport1": {
    "source": "cellcom",
@@ -59,9 +59,9 @@
    "until": "2026-11-21T21:59+00:00"
   },
   "foody": {
-   "source": "cellcom",
+   "source": "freetv",
    "title": "FOODY",
-   "until": "2026-11-15T21:59+00:00"
+   "until": "2026-11-15T22:00+00:00"
   },
   "i24ar": {
    "source": "yes",
@@ -111,7 +111,7 @@
   "luli": {
    "source": "yes",
    "title": "Luli",
-   "until": "2026-11-13T04:01+00:00"
+   "until": "2026-11-14T22:27+00:00"
   },
   "makan": {
    "source": "freetv",
@@ -241,7 +241,7 @@
   "x.1+1": {
    "source": "cellcom",
    "title": "1+1",
-   "until": "2026-11-13T22:35+00:00"
+   "until": "2026-11-15T22:10+00:00"
   },
   "x.102תלאביב": {
    "source": "cellcom",
@@ -266,7 +266,7 @@
   "x.aplus": {
    "source": "freetv",
    "title": "A Plus",
-   "until": "2026-11-12T22:00+00:00"
+   "until": "2026-11-15T22:00+00:00"
   },
   "x.arte": {
    "source": "yes",
@@ -281,7 +281,7 @@
   "x.bloomberg": {
    "source": "yes",
    "title": "Bloomberg",
-   "until": "2026-11-14T04:00+00:00"
+   "until": "2026-11-14T22:00+00:00"
   },
   "x.bober": {
    "source": "cellcom",
@@ -316,7 +316,7 @@
   "x.channel1rus": {
    "source": "yes",
    "title": "Channel 1 Rus",
-   "until": "2026-11-13T04:50+00:00"
+   "until": "2026-11-14T23:15+00:00"
   },
   "x.childhood": {
    "source": "yes",
@@ -401,7 +401,7 @@
   "x.e": {
    "source": "cellcom",
    "title": "E!",
-   "until": "2026-11-22T21:59+00:00"
+   "until": "2026-11-24T18:31+00:00"
   },
   "x.eco99fm": {
    "source": "cellcom",
@@ -436,12 +436,12 @@
   "x.foodnetwork": {
    "source": "cellcom",
    "title": "Food Network",
-   "until": "2026-11-12T22:00+00:00"
+   "until": "2026-11-16T21:59+00:00"
   },
   "x.foxnews": {
    "source": "yes",
    "title": "Fox News",
-   "until": "2026-11-13T04:00+00:00"
+   "until": "2026-11-14T22:00+00:00"
   },
   "x.france2": {
    "source": "yes",
@@ -451,17 +451,17 @@
   "x.france24": {
    "source": "yes",
    "title": "FRANCE 24",
-   "until": "2026-11-13T04:00+00:00"
+   "until": "2026-11-14T22:00+00:00"
   },
   "x.france24fr": {
    "source": "yes",
    "title": "France 24 fr",
-   "until": "2026-11-13T04:00+00:00"
+   "until": "2026-11-14T22:00+00:00"
   },
   "x.france3": {
    "source": "yes",
    "title": "FRANCE3",
-   "until": "2026-11-14T04:20+00:00"
+   "until": "2026-11-14T23:10+00:00"
   },
   "x.freetvאוכל": {
    "source": "freetv",
@@ -561,7 +561,7 @@
   "x.greekmusic": {
    "source": "yes",
    "title": "Greek music (MAD World)",
-   "until": "2026-11-13T05:00+00:00"
+   "until": "2026-11-14T22:00+00:00"
   },
   "x.halatv": {
    "source": "yes",
@@ -571,7 +571,7 @@
   "x.healthchannel": {
    "source": "yes",
    "title": "Health Channel",
-   "until": "2026-11-13T05:00+00:00"
+   "until": "2026-11-14T22:11+00:00"
   },
   "x.hidabroot": {
    "source": "yes",
@@ -580,8 +580,8 @@
   },
   "x.history": {
    "source": "yes",
-   "title": "History HD",
-   "until": "2026-11-14T22:35+00:00"
+   "title": "History SD",
+   "until": "2026-11-14T22:16+00:00"
   },
   "x.homeandfamily": {
    "source": "yes",
@@ -606,7 +606,7 @@
   "x.humorchannel2": {
    "source": "yes",
    "title": "Humor Channel 2",
-   "until": "2026-11-13T04:18+00:00"
+   "until": "2026-11-14T22:03+00:00"
   },
   "x.i24newsarabic": {
    "source": "cellcom",
@@ -621,7 +621,7 @@
   "x.i24newsfrench": {
    "source": "cellcom",
    "title": "i24NEWS FRENCH",
-   "until": "2026-11-24T08:00+00:00"
+   "until": "2026-11-24T19:00+00:00"
   },
   "x.idxtra": {
    "source": "yes",
@@ -686,7 +686,7 @@
   "x.lovechannel": {
    "source": "yes",
    "title": "Love Channel",
-   "until": "2026-11-13T04:05+00:00"
+   "until": "2026-11-14T03:38+00:00"
   },
   "x.lubimoyakino": {
    "source": "cellcom",
@@ -766,32 +766,32 @@
   "x.musicboxmuzon": {
    "source": "yes",
    "title": "Music Box Muzon (Rus MusicBox)",
-   "until": "2026-11-13T06:00+00:00"
+   "until": "2026-11-15T00:00+00:00"
   },
   "x.musicil": {
    "source": "freetv",
    "title": "Music IL",
-   "until": "2026-11-12T22:30+00:00"
+   "until": "2026-11-15T22:30+00:00"
   },
   "x.muzon": {
    "source": "cellcom",
    "title": "MUZON",
-   "until": "2026-11-13T00:00+00:00"
+   "until": "2026-11-16T00:00+00:00"
   },
   "x.nashekino": {
    "source": "yes",
    "title": "NASHE KINO",
-   "until": "2026-11-13T05:00+00:00"
+   "until": "2026-11-14T23:15+00:00"
   },
   "x.nationalg": {
    "source": "yes",
    "title": "National G. HD IP Only",
-   "until": "2026-11-13T03:45+00:00"
+   "until": "2026-11-14T22:11+00:00"
   },
   "x.nationalgwild": {
    "source": "yes",
    "title": "National G. Wild HD",
-   "until": "2026-11-13T04:14+00:00"
+   "until": "2026-11-14T22:10+00:00"
   },
   "x.newsmax": {
    "source": "cellcom",
@@ -841,7 +841,7 @@
   "x.realitychannel": {
    "source": "yes",
    "title": "Reality Channel (Reshet)",
-   "until": "2026-11-13T04:16+00:00"
+   "until": "2026-11-14T22:50+00:00"
   },
   "x.rentv": {
    "source": "yes",
@@ -851,7 +851,7 @@
   "x.rtl": {
    "source": "yes",
    "title": "RTL",
-   "until": "2026-11-14T04:15+00:00"
+   "until": "2026-11-15T00:05+00:00"
   },
   "x.rtm": {
    "source": "yes",
@@ -866,12 +866,12 @@
   "x.rtvi": {
    "source": "cellcom",
    "title": "RTVi",
-   "until": "2026-11-16T22:00+00:00"
+   "until": "2026-11-23T21:59+00:00"
   },
   "x.sat1": {
    "source": "yes",
    "title": "SAT 1",
-   "until": "2026-11-13T22:00+00:00"
+   "until": "2026-11-14T22:15+00:00"
   },
   "x.shansontv": {
    "source": "cellcom",
@@ -931,7 +931,7 @@
   "x.travelchannel": {
    "source": "yes",
    "title": "Travel Channel",
-   "until": "2026-11-13T04:00+00:00"
+   "until": "2026-11-14T22:01+00:00"
   },
   "x.turkishdrama": {
    "source": "yes",
@@ -956,17 +956,17 @@
   "x.tve": {
    "source": "yes",
    "title": "TVE",
-   "until": "2026-11-14T22:31+00:00"
+   "until": "2026-11-14T23:05+00:00"
   },
   "x.tvgameshows": {
    "source": "yes",
    "title": "TV Game Shows",
-   "until": "2026-11-14T04:37+00:00"
+   "until": "2026-11-14T22:15+00:00"
   },
   "x.vacationchannel": {
    "source": "yes",
    "title": "Vacation Channel",
-   "until": "2026-11-14T03:58+00:00"
+   "until": "2026-11-14T22:11+00:00"
   },
   "x.vivaistanbul": {
    "source": "yes",
@@ -991,12 +991,12 @@
   "x.vox": {
    "source": "yes",
    "title": "VOX",
-   "until": "2026-11-14T04:40+00:00"
+   "until": "2026-11-14T23:30+00:00"
   },
   "x.vremya": {
    "source": "yes",
    "title": "VREMYA",
-   "until": "2026-11-14T22:05+00:00"
+   "until": "2026-11-14T23:00+00:00"
   },
   "x.wiz": {
    "source": "yes",
@@ -1006,7 +1006,7 @@
   "x.worldaction1": {
    "source": "yes",
    "title": "World Action 1",
-   "until": "2026-11-13T04:02+00:00"
+   "until": "2026-11-14T22:30+00:00"
   },
   "x.worldaction2": {
    "source": "yes",
@@ -1086,12 +1086,12 @@
   "x.zoom": {
    "source": "cellcom",
    "title": "ZOOM",
-   "until": "2026-11-13T21:59+00:00"
+   "until": "2026-11-22T21:59+00:00"
   },
   "x.zoomtoon": {
    "source": "cellcom",
    "title": "ZOOM Toon",
-   "until": "2026-11-13T21:59+00:00"
+   "until": "2026-11-22T21:59+00:00"
   },
   "x.בית+": {
    "source": "cellcom",
@@ -1151,17 +1151,17 @@
   "x.יםתיכוני": {
    "source": "cellcom",
    "title": "ים תיכוני",
-   "until": "2026-11-15T21:59+00:00"
+   "until": "2026-11-22T21:59+00:00"
   },
   "x.יםתיכוני+": {
    "source": "cellcom",
    "title": "ים תיכוני +",
-   "until": "2026-11-15T21:59+00:00"
+   "until": "2026-11-22T21:59+00:00"
   },
   "x.יםתיכוני2": {
    "source": "cellcom",
    "title": "ים תיכוני 2",
-   "until": "2026-11-15T21:59+00:00"
+   "until": "2026-11-22T21:59+00:00"
   },
   "x.כאן88": {
    "source": "cellcom",
@@ -1204,9 +1204,9 @@
    "until": "2026-11-15T22:00+00:00"
   },
   "x.לוגי": {
-   "source": "cellcom",
+   "source": "freetv",
    "title": "לוגי",
-   "until": "2026-11-15T21:59+00:00"
+   "until": "2026-11-22T22:00+00:00"
   },
   "x.מוזיקהil": {
    "source": "cellcom",
@@ -1306,7 +1306,7 @@
   "x.ערוץ24צרפת": {
    "source": "freetv",
    "title": "ערוץ 24 צרפת",
-   "until": "2026-11-14T22:00+00:00"
+   "until": "2026-11-21T22:00+00:00"
   },
   "x.ערוץארץנהדרת": {
    "source": "freetv",
@@ -1316,12 +1316,12 @@
   "x.ערוץדוקופשע": {
    "source": "cellcom",
    "title": "ערוץ דוקו פשע",
-   "until": "2026-11-14T21:59+00:00"
+   "until": "2026-11-20T22:09+00:00"
   },
   "x.ערוץהאהבה": {
    "source": "cellcom",
    "title": "ערוץ האהבה",
-   "until": "2026-11-12T22:07+00:00"
+   "until": "2026-11-14T21:59+00:00"
   },
   "x.ערוץהאקשןהעולמי1": {
    "source": "cellcom",
@@ -1331,7 +1331,7 @@
   "x.ערוץהאקשןהעולמי2": {
    "source": "cellcom",
    "title": "ערוץ האקשן העולמי 2",
-   "until": "2026-11-15T21:59+00:00"
+   "until": "2026-11-23T22:42+00:00"
   },
   "x.ערוץהדרמותההודיות1": {
    "source": "cellcom",
@@ -1346,7 +1346,7 @@
   "x.ערוץהדרמותהטורקיות+": {
    "source": "cellcom",
    "title": "ערוץ הדרמות הטורקיות +",
-   "until": "2026-11-15T21:59+00:00"
+   "until": "2026-11-22T21:59+00:00"
   },
   "x.ערוץהדרמותהטורקיות2": {
    "source": "cellcom",
@@ -1386,7 +1386,7 @@
   "x.ערוץההומור2": {
    "source": "cellcom",
    "title": "ערוץ ההומור 2",
-   "until": "2026-11-13T22:03+00:00"
+   "until": "2026-11-15T21:59+00:00"
   },
   "x.ערוץההיסטוריה": {
    "source": "cellcom",
@@ -1431,7 +1431,7 @@
   "x.ערוץהנופש": {
    "source": "cellcom",
    "title": "ערוץ הנופש",
-   "until": "2026-11-14T21:59+00:00"
+   "until": "2026-11-21T21:59+00:00"
   },
   "x.ערוץהסרטיםהיםתיכוני1": {
    "source": "cellcom",
@@ -1451,10 +1451,10 @@
   "x.ערוץהקומדיותהקלאסיות": {
    "source": "cellcom",
    "title": "ערוץ הקומדיות הקלאסיות",
-   "until": "2026-11-15T21:59+00:00"
+   "until": "2026-11-24T18:33+00:00"
   },
   "x.ערוץהקריוקי": {
-   "source": "cellcom",
+   "source": "freetv",
    "title": "ערוץ הקריוקי",
    "until": "2026-11-15T22:00+00:00"
   },
@@ -1466,7 +1466,7 @@
   "x.ערוץהשעשועונים": {
    "source": "cellcom",
    "title": "ערוץ השעשועונים",
-   "until": "2026-11-14T21:59+00:00"
+   "until": "2026-11-21T21:59+00:00"
   },
   "x.ערוץסברימרנן": {
    "source": "freetv",
