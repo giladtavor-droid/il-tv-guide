@@ -14,7 +14,7 @@
 נכשלת בלי לכתוב קובץ, כך שהקובץ של אתמול נשאר.
 
 הרצה:  python build.py [out_dir]     (ברירת מחדל: dist)
-פלט:    il-week.xml.gz, report.json (כמה ערוצים ותוכניות מכל מקור, עד מתי, כמה זמן)
+פלט:    il-week.xml.gz, report.json (כמה ערוצים ותוכניות מכל מקור, עד מתי, כמה זמן), report.md (כל ערוץ ושמותיו)
 """
 import concurrent.futures as cf
 import datetime as dt
@@ -380,6 +380,28 @@ def write(chosen, path, now, aliases):
         out.write("</tv>\n")
 
 
+def report_markdown(report, names, now):
+    """דוח קריא (Markdown): המקורות, ואז כל ערוץ עם שמות התצוגה שנכתבו לקובץ, המקור, עד מתי וכמה ימים קדימה."""
+    def cell(v):
+        return str(v).replace("|", "\\|")
+
+    def until_txt(iso):
+        return iso.replace("T", " ")[:16] if iso else "-"
+
+    lines = ["# לוח שידורים ישראלי — דוח ריצה", "", "נבנה: %s" % report.get("built", ""), "",
+             "| מקור | ערוצים | תוכניות | עד |", "|---|---|---|---|"]
+    for name, src in report.get("sources", {}).items():
+        lines.append("| %s | %s | %s | %s |" % (name, src.get("channels", 0), src.get("programmes", 0), until_txt(src.get("until"))))
+    lines += ["", "| מפתח | שמות תצוגה | מקור | עד | ימים קדימה |", "|---|---|---|---|---|"]
+    for key in sorted(report.get("per_channel", {})):
+        ch = report["per_channel"][key]
+        until = ch.get("until")
+        days = max(0, (dt.datetime.fromisoformat(until) - now).days) if until else 0
+        lines.append("| %s | %s | %s | %s | %d |" % (cell(key), " · ".join(cell(n) for n in names.get(key, [ch.get("title", "")])),
+                                                   cell(ch.get("source", "")), until_txt(until), days))
+    return "\n".join(lines) + "\n"
+
+
 def main():
     out_dir = sys.argv[1] if len(sys.argv) > 1 else "dist"
     os.makedirs(out_dir, exist_ok=True)
@@ -420,6 +442,9 @@ def main():
     os.replace(tmp, os.path.join(out_dir, "il-week.xml.gz"))
     with open(os.path.join(out_dir, "report.json"), "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=1)
+    names = {c.key: display_names(c.key, c.title, YES_ALIASES) for c in chosen}
+    with open(os.path.join(out_dir, "report.md"), "w", encoding="utf-8") as f:
+        f.write(report_markdown(report, names, now))
     print("size: %.1f MB" % (os.path.getsize(os.path.join(out_dir, "il-week.xml.gz")) / 1e6))
 
 

@@ -64,5 +64,17 @@ class CanonAdditions(unittest.TestCase):
         self.assertEqual(build.canon_of("Sport 5 4K"), "sport54k")
 
 
+class ReportMarkdown(unittest.TestCase):
+    def test_table_rows_and_escaping(self):
+        import datetime as dt
+        now = dt.datetime(2026, 11, 8, 20, 0, tzinfo=dt.timezone.utc)
+        report = {"built": "2026-11-08T20:00:00+00:00",
+                  "sources": {"yes": {"channels": 1, "programmes": 10, "seconds": 1.0, "until": "2026-11-15T00:00+00:00"}},
+                  "per_channel": {"kan11": {"source": "freetv", "title": "ערוץ 11", "until": "2026-11-20T22:00+00:00"}}}
+        md = build.report_markdown(report, {"kan11": ["כאן 11", "Kan 11", "a|b"]}, now)
+        self.assertIn("| kan11 | כאן 11 · Kan 11 · a\\|b | freetv | 2026-11-20 22:00 | 12 |", md)
+        self.assertIn("| yes | 1 | 10 |", md)
+
+
 if __name__ == "__main__":
     unittest.main()
