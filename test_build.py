@@ -29,6 +29,26 @@ class YesNumberAliases(unittest.TestCase):
         self.assertNotIn(build.canon_of("Some Pack"), a)
         self.assertNotIn(build.canon_of("Radio X"), a)
 
+    def test_every_number_of_the_same_channel_is_kept(self):
+        a = build.yes_number_aliases([{"title": "History SD", "number": "44", "channelId": "CH1"},
+                                      {"title": "History HD", "number": "45", "channelId": "CH2"},
+                                      {"title": "Kan HD", "number": "11", "channelId": "CH30"},
+                                      {"title": "Kan HD", "number": "311", "channelId": "CH31"}])
+        self.assertEqual(a[build.canon_of("History SD")], ["yes 44", "yes 45"])
+        self.assertEqual(a["kan11"], ["yes 11", "yes 311"])
+
+    def test_zero_and_leading_zeros(self):
+        a = build.yes_number_aliases([{"title": "yes+ Love", "number": "0", "channelId": "CH1"},
+                                      {"title": "Kan HD", "number": "011", "channelId": "CH30"}])
+        self.assertNotIn(build.canon_of("yes+ Love"), a)
+        self.assertEqual(a["kan11"], ["yes 11"])
+
+    def test_previous_numbers_used_when_yes_is_down(self):
+        prev = {"built": "x", "yes_numbers": {"kan11": ["yes 11"]}}
+        self.assertEqual(build.aliases_or_previous({}, prev), {"kan11": ["yes 11"]})
+        self.assertEqual(build.aliases_or_previous({"kan11": ["yes 11", "yes 311"]}, prev), {"kan11": ["yes 11", "yes 311"]})
+        self.assertEqual(build.aliases_or_previous({}, {"built": "x"}), {})
+
 
 class DisplayNames(unittest.TestCase):
     def test_hebrew_first_then_english_then_aliases(self):

@@ -176,10 +176,18 @@ def yes_number_aliases(items):
         if str(c.get("channelId", "")).startswith("I0"):
             continue
         n = str(c.get("number") or "").strip()
-        if not n.isdigit():
+        if not n.isdigit() or int(n) == 0:
             continue
-        out.setdefault(canon_of(c.get("title") or ""), ["yes %s" % n])
+        alias = "yes %d" % int(n)
+        lst = out.setdefault(canon_of(c.get("title") or ""), [])
+        if alias not in lst:
+            lst.append(alias)          # אותו ערוץ בכמה מספרים (כאן 11 גם ב-311 וב-511, History ב-44 וב-45)
     return out
+
+
+def aliases_or_previous(current, previous_report):
+    """הכינויים של הריצה הזו; כש-yes נפל (ריק) - מה שנשמר ב-report.json של הריצה הקודמת, כדי שהם לא ייעלמו מהקובץ."""
+    return current or dict(previous_report.get("yes_numbers") or {})
 
 
 # ------------------------------------------------------------------ מקורות
@@ -428,6 +436,19 @@ def main():
     covered = {c.key for c in channels if c.last_stop() and c.last_stop() > now + dt.timedelta(days=6)}
     channels += run("yes", yes, covered)
 
+    # yes נפל? מספרי הערוצים מהריצה הקודמת (report.json בשורש המאגר, מגיע עם ה-checkout) במקום לפרסם קובץ בלעדיהם
+    previous = {}
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "report.json"), encoding="utf-8") as f:
+            previous = json.load(f)
+    except (OSError, ValueError):
+        pass
+    aliases = aliases_or_previous(YES_ALIASES, previous)
+    if not YES_ALIASES and aliases:
+        print("yes numbers taken from the previous run (%d channels)" % len(aliases), file=sys.stderr)
+    report["yes_numbers"] = aliases
+    report["yes_numbers_from_previous_run"] = not YES_ALIASES and bool(aliases)
+
     chosen = pick(channels, now)
     total = sum(len(c.programmes) for c in chosen)
     report["channels"] = len(chosen)
@@ -438,11 +459,11 @@ def main():
         print("too few programmes (%d < %d): nothing written" % (total, MIN_PROGRAMMES), file=sys.stderr)
         sys.exit(1)
     tmp = os.path.join(out_dir, "il-week.xml.gz.part")
-    write(chosen, tmp, now, YES_ALIASES)
+    write(chosen, tmp, now, aliases)
     os.replace(tmp, os.path.join(out_dir, "il-week.xml.gz"))
     with open(os.path.join(out_dir, "report.json"), "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=1)
-    names = {c.key: display_names(c.key, c.title, YES_ALIASES) for c in chosen}
+    names = {c.key: display_names(c.key, c.title, aliases) for c in chosen}
     with open(os.path.join(out_dir, "report.md"), "w", encoding="utf-8") as f:
         f.write(report_markdown(report, names, now))
     print("size: %.1f MB" % (os.path.getsize(os.path.join(out_dir, "il-week.xml.gz")) / 1e6))
