@@ -125,6 +125,21 @@ CANON = {
     "history": (["היסטוריה", "History Channel", "History"], ["history"]),
     "foodchannel": (["ערוץ האוכל", "Food Channel"], ["food channel"]),
     "ego": (["אגו", "EGO"], ["ego"]),
+    # ערוצי FreeTV: שמות הספק (FreeTV סרטים פעולה) וכפי שספקי IPTV כותבים אותם ("FREE TV MOVIES ACTION", "FREE MOVIES ACTION").
+    "freetvmoviesaction": (["FreeTV סרטים פעולה", "FreeTV Movies Action", "Free Movies Action"], ["freetv סרטים פעולה"]),
+    "freetvmoviescomedy": (["FreeTV סרטים קומדיה", "FreeTV Movies Comedy", "FreeTV Movies Comdey", "Free Movies Comedy"], ["freetv סרטים קומדיה"]),
+    "freetvmoviesdrama": (["FreeTV סרטים דרמה", "FreeTV Movies Drama", "Free Movies Drama"], ["freetv סרטים דרמה"]),
+    "freetvmovieshorror": (["FreeTV סרטים אימה", "FreeTV Movies Horror", "Free Movies Horror"], ["freetv סרטים אימה"]),
+    "freetvmoviesisraeli": (["FreeTV סרטים ישראלי", "FreeTV Movies Israeli", "Free Israeli Movies"], ["freetv סרטים ישראלי"]),
+    "freetvmoviesfamily": (["FreeTV סרטים משפחה", "FreeTV Movies Family", "Free Movies Family"], ["freetv סרטים משפחה"]),
+    "freetvmoviesthriller": (["FreeTV סרטים מתח", "FreeTV Movies Thriller", "Free Movies Thriller"], ["freetv סרטים מתח"]),
+    "freetvmoviesromance": (["FreeTV סרטים רומנטי", "FreeTV Movies Romantic", "Free Movies Romance"], ["freetv סרטים רומנטי"]),
+    "freetvseriesdrama": (["FreeTV סדרות דרמה", "FreeTV Drama", "FreeTV TV Series"], ["freetv סדרות דרמה"]),
+    "freetvseriescomedy": (["FreeTV סדרות קומדיה", "FreeTV Comedy"], ["freetv סדרות קומדיה"]),
+    "freetvdocu": (["FreeTV דוקו", "FreeTV Docu"], ["freetv דוקו"]),
+    "freetvcooking": (["FreeTV אוכל", "FreeTV Cooking"], ["freetv אוכל"]),
+    "freetvlifestyle": (["FreeTV לייף סטייל", "FreeTV Lifestyle"], ["freetv לייף סטייל"]),
+    "freetvglobal": (["FreeTV גלובל", "FreeTV Global", "Free Global"], ["freetv גלובל"]),
 }
 BY_SOURCE_NAME = {}
 for key, (_, names) in CANON.items():

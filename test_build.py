@@ -78,6 +78,14 @@ class CanonAdditions(unittest.TestCase):
             self.assertEqual(build.canon_of(title), key, title)
             self.assertEqual(build.CANON[key][0][0], hebrew, key)
 
+    def test_freetv_channels_have_english_names(self):
+        for title, key, english in [("FreeTV סרטים פעולה", "freetvmoviesaction", "FreeTV Movies Action"),
+                                    ("FreeTV סדרות קומדיה", "freetvseriescomedy", "FreeTV Comedy"),
+                                    ("FreeTV דוקו", "freetvdocu", "FreeTV Docu")]:
+            self.assertEqual(build.canon_of(title), key, title)
+            self.assertIn(english, build.CANON[key][0])
+            self.assertEqual(build.CANON[key][0][0], title)
+
     def test_existing_keys_unchanged(self):
         self.assertEqual(build.canon_of("Keshet HD"), "keshet12")
         self.assertEqual(build.canon_of("ערוץ 11"), "kan11")
