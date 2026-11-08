@@ -48,5 +48,21 @@ class DisplayNames(unittest.TestCase):
         self.assertEqual([n.lower() for n in names].count("hop"), 1)
 
 
+class CanonAdditions(unittest.TestCase):
+    def test_yes_and_kids_channels_have_hebrew_first(self):
+        for title, key, hebrew in [("yes Movies Action", "yesmoviesaction", "yes סרטים אקשן"),
+                                   ("yes Docu HD", "yesdocu", "yes דוקו"),
+                                   ("HOP! Childhood", "hopchildhood", "הופ ילדות"),
+                                   ("History SD", "history", "היסטוריה"),
+                                   ("Disney Junior", "disneyjunior", "דיסני ג'וניור")]:
+            self.assertEqual(build.canon_of(title), key, title)
+            self.assertEqual(build.CANON[key][0][0], hebrew, key)
+
+    def test_existing_keys_unchanged(self):
+        self.assertEqual(build.canon_of("Keshet HD"), "keshet12")
+        self.assertEqual(build.canon_of("ערוץ 11"), "kan11")
+        self.assertEqual(build.canon_of("Sport 5 4K"), "sport54k")
+
+
 if __name__ == "__main__":
     unittest.main()

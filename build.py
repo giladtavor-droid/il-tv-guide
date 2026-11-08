@@ -104,6 +104,27 @@ CANON = {
     "yoyo": (["יויו", "Yoyo"], ["יויו", "yoyo"]),
     "baby": (["Baby", "בייבי"], ["baby", "בייבי"]),
     "luli": (["לולי", "Luli"], ["luli"]),
+    # ערוצי yes, ילדים ותיעוד: שם עברי ראשון (מוצג באפליקציה), אחריו האנגלית. שמות המקור כפי ש-norm מחזירה אותם.
+    "yesmoviesaction": (["yes סרטים אקשן", "yes Movies Action"], ["yes movies action"]),
+    "yesmoviescomedy": (["yes סרטים קומדיה", "yes Movies Comedy"], ["yes movies comedy"]),
+    "yesmoviesdrama": (["yes סרטים דרמה", "yes Movies Drama"], ["yes movies drama"]),
+    "yesmovieskids": (["yes סרטים ילדים", "yes Movies Kids"], ["yes movies kids"]),
+    "yesisraelicinema": (["yes קולנוע ישראלי", "yes Israeli Cinema"], ["yes israeli cinema"]),
+    "yesdocu": (["yes דוקו", "yes Docu"], ["yes docu"]),
+    "yestvaction": (["yes TV אקשן", "yes TV Action"], ["yes tv action"]),
+    "yestvcomedy": (["yes TV קומדיה", "yes TV Comedy"], ["yes tv comedy"]),
+    "yestvdrama": (["yes TV דרמה", "yes TV Drama"], ["yes tv drama"]),
+    "disney": (["דיסני", "Disney Channel", "Disney"], ["disney"]),
+    "disneyjunior": (["דיסני ג'וניור", "Disney Junior"], ["disney junior"]),
+    "nickelodeon": (["ניקלודיאון", "Nickelodeon"], ["nickelodeon"]),
+    "nickjunior": (["ניק ג'וניור", "Nick Junior"], ["nick junior"]),
+    "teennick": (["טין ניק", "TeenNick"], ["teennick"]),
+    "hop": (["הופ", "HOP"], ["hop"]),
+    "hopchildhood": (["הופ ילדות", "HOP Childhood"], ["hop! childhood", "hop childhood"]),
+    "discovery": (["דיסקברי", "Discovery Channel", "Discovery"], ["discovery"]),
+    "history": (["היסטוריה", "History Channel", "History"], ["history"]),
+    "foodchannel": (["ערוץ האוכל", "Food Channel"], ["food channel"]),
+    "ego": (["אגו", "EGO"], ["ego"]),
 }
 BY_SOURCE_NAME = {}
 for key, (_, names) in CANON.items():
