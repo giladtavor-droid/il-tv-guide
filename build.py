@@ -115,6 +115,26 @@ def canon_of(title):
     return BY_SOURCE_NAME.get(norm(title)) or "x." + norm(title)
 
 
+# ------------------------------------------------------------------ מספרי הערוצים של yes
+
+# מפתח -> ["yes N", "YES N"]: מספר הערוץ ב-yes כשם תצוגה. ספקי IPTV קוראים לערוצים "IL: YES 13" לפי המספור הזה,
+# והנרמול של האפליקציה הופך גם "IL: YES 13" וגם "yes 13" לאותו מפתח. נאסף מכל ערוצי yes, גם כאלה שהלוח שלהם נלקח ממקור אחר.
+YES_ALIASES = {}
+
+
+def yes_number_aliases(items):
+    """ערוצי ה-API של yes -> מפתח CANON -> כינויי מספר. בלי ערוצי רדיו (I0…) ובלי ערוץ שאין לו מספר."""
+    out = {}
+    for c in items:
+        if str(c.get("channelId", "")).startswith("I0"):
+            continue
+        n = str(c.get("number") or "").strip()
+        if not n.isdigit():
+            continue
+        out.setdefault(canon_of(c.get("title") or ""), ["yes %s" % n, "YES %s" % n])
+    return out
+
+
 # ------------------------------------------------------------------ מקורות
 
 class Channel:
@@ -229,6 +249,8 @@ def cellcom(now):
 def yes(now, skip_keys):
     base = "https://svc.yes.co.il/api/content/broadcast-schedule/channels"
     items = fetch(base, headers={"Accept-Language": "he-IL"})["items"]
+    YES_ALIASES.clear()
+    YES_ALIASES.update(yes_number_aliases(items))
     chans, seen = [], set()
     for c in items:
         if c["channelId"] in seen or c["channelId"].startswith("I0"):
