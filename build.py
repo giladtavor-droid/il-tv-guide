@@ -99,7 +99,7 @@ CANON = {
     "reshet13": (["Reshet 13", "רשת 13", "ערוץ 13"], ["ערוץ 13", "רשת 13", "רשת", "reshet"]),
     "now14": (["Now 14", "עכשיו 14", "ערוץ 14"], ["ערוץ 14", "channel 14"]),
     "ch9": (["Israel Plus", "ישראל פלוס", "ערוץ 9"], ["ערוץ 9", "israel plus"]),
-    "i24he": (["i24NEWS Hebrew", "i24 עברית", "i24NEWS"], ["i24 עברית", "עברית i24", "i24 hebrew"]),
+    "i24he": (["i24NEWS Hebrew", "i24 עברית", "i24NEWS"], ["i24 עברית", "עברית i24", "i24 hebrew", "i24news בעברית"]),
     "i24en": (["i24NEWS English", "i24 English"], ["i24 english"]),
     "i24fr": (["i24NEWS French", "i24 French"], ["i24 french"]),
     "i24ar": (["i24NEWS Arabic", "i24 Arabic"], ["i24 arabic"]),
@@ -107,7 +107,7 @@ CANON = {
     "kanedu": (["Kan Educational", "כאן חינוכית", "חינוכית"], ["חינוכית", "כאן חינוכית", "kan educational"]),
     "makan": (["Makan 33", "מכאן", "Makan"], ["מכאן", "makan"]),
     "knesset": (["Knesset", "ערוץ הכנסת"], ["ערוץ הכנסת", "knesset"]),
-    "music24": (["Music 24", "מוזיקה 24", "Channel 24 Music"], ["music 24", "מוסיקה 24"]),
+    "music24": (["Music 24", "מוזיקה 24", "Channel 24 Music"], ["music 24", "מוסיקה 24", "ערוץ 24"]),
     "ch23": (["ערוץ 23 רק ישראלי", "23 Only Israeli"], ["ערוץ 23 רק ישראלי", "23 - only israeli"]),
     "sport1": (["ספורט 1", "Sport 1 Israel"], ["ספורט 1", "sport 1"]),
     "sport2": (["ספורט 2", "Sport 2 Israel"], ["ספורט 2", "sport 2"]),
@@ -180,15 +180,34 @@ CANON = {
     "mtv": (["MTV", "אם טי וי"], ["mtv"]),
     "dwrussian": (["DW רוסית", "DW Russian"], ["dw רוסית", "dw russian"]),
     "israel33": (["ישראל 33", "Israel 33"], ["ישראל 33", "israel 33"]),
+    "viva": (["ערוץ ויוה", "Viva"], ["ויוה", "viva"]),
+    "vivapremium": (["ויוה פרימיום", "Viva Premium"], ["ויוה פרימיום", "viva premium"]),
+    "natgeo": (["נשיונל גיאוגרפיק", "National Geographic"], ["נשיונל גיאוגרפיק", "national geographic"]),
+    "natgeowild": (["נשיונל גיאוגרפיק WILD", "Nat Geo Wild"], ["נ. ג’יאוגרפיק wild", "נשיונל גיאוגרפיק wild", "nat geo wild"]),
+    "ftv": (["ערוץ האופנה FTV", "Fashion TV"], ["האופנה ftv", "fashion tv", "ftv"]),
+    "travel": (["ערוץ הטיולים", "Travel Channel"], ["הטיולים", "travel channel"]),
+    "echannel": (["ערוץ הבידור E", "E! Entertainment"], ["הבידור e", "e ערוץ הבידור", "e entertainment"]),
 }
 BY_SOURCE_NAME = {}
 for key, (_, names) in CANON.items():
     for n in names:
         BY_SOURCE_NAME[norm(n)] = key
+# שם תצוגה הוא גם שם שמקור עשוי להשתמש בו ("ספורט 5", "יורוספורט 1", "ניקלודיאון"). נרשם אחרי שמות
+# המקור ורק אם המפתח עוד פנוי, כך ששם מקור מפורש תמיד מנצח.
+for key, (display, _) in CANON.items():
+    for n in display:
+        BY_SOURCE_NAME.setdefault(norm(n), key)
+
+# EPGShare מקדים "ערוץ" לשמות ("ערוץ דיסקברי", "ערוץ אגו"). נופל רק כשהשם המלא לא נמצא, כך ש"ערוץ 11" לא נשבר.
+CHANNEL_WORD = re.compile("^ערוץ")
 
 
 def canon_of(title):
-    return BY_SOURCE_NAME.get(norm(title)) or "x." + norm(title)
+    n = norm(title)
+    key = BY_SOURCE_NAME.get(n)
+    if key is None and CHANNEL_WORD.match(n):
+        key = BY_SOURCE_NAME.get(CHANNEL_WORD.sub("", n, count=1))
+    return key or "x." + n
 
 
 # ------------------------------------------------------------------ מספרי הערוצים של yes

@@ -135,6 +135,48 @@ class LiveAndSuffixNames(unittest.TestCase):
         self.assertNotEqual(build.canon_of("ספורט 5 לייב"), build.canon_of("ספורט 5"))
 
 
+class DisplayNamesAreMatchedToo(unittest.TestCase):
+    """שם התצוגה של ערוץ הוא גם שם שמקור עשוי להשתמש בו. בלי זה "ספורט 5" נכנס כערוץ שני לצד sport5."""
+
+    def test_a_display_name_finds_its_key(self):
+        self.assertEqual(build.canon_of("ספורט 5"), "sport5")
+        self.assertEqual(build.canon_of("יורוספורט 1"), "eurosport1")
+        self.assertEqual(build.canon_of("ניקלודיאון"), "nickelodeon")
+        self.assertEqual(build.canon_of("i24NEWS English"), "i24en")
+        self.assertEqual(build.canon_of("דיסני ג'וניור"), "disneyjunior")
+
+    def test_an_explicit_source_name_always_wins(self):
+        for key, (_, names) in build.CANON.items():
+            for n in names:
+                self.assertEqual(build.canon_of(n), key, n)
+
+
+class ChannelWordPrefix(unittest.TestCase):
+    """EPGShare מקדים "ערוץ" לשמות ("ערוץ דיסקברי", "ערוץ אגו"). הקידומת נופלת רק כשהשם המלא לא נמצא."""
+
+    def test_the_prefix_is_dropped_when_the_full_name_is_unknown(self):
+        self.assertEqual(build.canon_of("ערוץ דיסקברי"), "discovery")
+        self.assertEqual(build.canon_of("ערוץ אגו שידור חי"), "ego")
+        self.assertEqual(build.canon_of("ערוץ TeenNick"), "teennick")
+
+    def test_a_name_that_starts_with_the_word_is_not_broken(self):
+        self.assertEqual(build.canon_of("ערוץ 11"), "kan11")
+        self.assertEqual(build.canon_of("ערוץ 12"), "keshet12")
+        self.assertEqual(build.canon_of("ערוץ 9"), "ch9")
+
+    def test_channels_the_outside_guides_add_have_keys(self):
+        for title, key in [("ערוץ ויוה", "viva"),
+                           ("ויוה פרימיום", "vivapremium"),
+                           ("ערוץ נשיונל גיאוגרפיק", "natgeo"),
+                           ("נ. ג’יאוגרפיק WILD", "natgeowild"),
+                           ("ערוץ האופנה FTV", "ftv"),
+                           ("ערוץ הטיולים", "travel"),
+                           ("ערוץ הבידור E", "echannel"),
+                           ("ערוץ 24", "music24"),
+                           ("i24news בעברית", "i24he")]:
+            self.assertEqual(build.canon_of(title), key, title)
+
+
 class XmltvSource(unittest.TestCase):
     def test_channels_and_programmes_are_read(self):
         by_key = {c.key: c for c in build.xmltv_channels(SAMPLE_XMLTV, "epgshare")}
