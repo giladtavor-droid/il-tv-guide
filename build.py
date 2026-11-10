@@ -1,10 +1,16 @@
 """
 לוח שידורים ישראלי לשבוע ומעלה, כקובץ XMLTV אחד דחוס (il-week.xml.gz).
 
-שלושה מקורות, כולם ממשקי האתרים עצמם (לא רשמיים):
+חמישה מקורות. שלושת הראשונים הם ממשקי האתרים עצמם (לא רשמיים):
   FreeTV  - web.freetv.tv, כ-72 ערוצים, 9 עד 16 ימים קדימה. בקשה אחת לכל יום לכל הערוצים.
   סלקום   - Kaltura של סלקום TV (partner 3197), כ-170 ערוצים, 7 עד 14 ימים. בקשה לכל ערוץ.
   yes     - svc.yes.co.il, כ-180 ערוצים, עד 7 ימים. בקשה לכל ערוץ לכל יום, ולכן רק לערוצים שאין בשני האחרים.
+
+ושני לוחות XMLTV מוכנים, שעד 11.11.2026 האפליקציה הוסיפה כמקורות נפרדים במכשיר:
+  EPGShare - epgshare01.online, כ-118 ערוצים. מכסה ערוצים שאין לשלושת הראשונים (הוט סינמה, משפחת ספורט 5).
+  Open-EPG - open-epg.com, כ-38 ערוצים.
+
+השניים אחרונים בעדיפות: ערוץ מקבל אותם רק כשאין לו מקור ישיר, או כשהם מגיעים חצי יום ומעלה רחוק יותר קדימה.
 
 אותו ערוץ בכמה מקורות (ערוץ 12 ב-FreeTV, "קשת" בסלקום, "Keshet HD" ב-yes) מאוחד למפתח אחד ([CANON]), ולכל ערוץ
 נלקח המקור שמגיע הכי רחוק קדימה (בתיקו: FreeTV, סלקום, yes). לכל ערוץ כמה שמות תצוגה, עברית ואנגלית, כמו בטבלת
@@ -19,6 +25,7 @@
 import concurrent.futures as cf
 import datetime as dt
 import gzip
+import io
 import json
 import os
 import re
@@ -27,6 +34,7 @@ import time
 import urllib.parse
 import urllib.request
 import uuid
+import xml.etree.ElementTree as ET
 from xml.sax.saxutils import escape, quoteattr
 
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
@@ -53,11 +61,32 @@ def fetch(url, data=None, headers=None, tries=3):
     raise last
 
 
+def fetch_bytes(url, tries=3):
+    """הגוף כבייטים, מפורק מ-gzip אם צריך. לקובצי XMLTV, שבאים .xml.gz ולא JSON."""
+    last = None
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+            with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                raw = r.read()
+            return gzip.decompress(raw) if raw[:2] == b"\x1f\x8b" else raw
+        except Exception as e:
+            last = e
+            time.sleep(1.5 * (i + 1))
+    raise last
+
+
 # ------------------------------------------------------------------ איחוד ערוצים
 
+# EPGShare ו-Open-EPG קוראים לאותו ערוץ "ערוץ 12 שידור חי", "MTV.il" או "ערוץ 12 | לוח השידורים המלא של קשת 12".
+# בלי לנקות את שלושת אלה כל ערוץ שלהם היה נכנס שוב, ככפילות לצד הערוץ שכבר הגיע ממקור ישיר.
+LIVE_TAIL = re.compile(r"\b(ב?שידור\s+חי)\b")
+IL_SUFFIX = re.compile(r"\.il\s*$", re.I)
+
+
 def norm(title):
-    """שם להשוואה: אותיות קטנות, בלי HD/SD/4K, סוגריים, סימנים ורווחים."""
-    s = title.lower()
+    """שם להשוואה: אותיות קטנות, בלי HD/SD/4K, סוגריים, סימנים ורווחים, בלי "שידור חי" ו-".il", ובלי זנב אחרי "|"."""
+    s = LIVE_TAIL.sub(" ", IL_SUFFIX.sub("", title.split("|")[0].lower()))
     s = re.sub(r"\(.*?\)|\[.*?\]", " ", s)
     s = re.sub(r"\b(hd|sd|fhd|uhd|ip only|ip|ssr|sub|ll|nopics|\+ip)\b", " ", s)
     return re.sub(r"[^0-9a-z֐-׿+]", "", s)
@@ -65,7 +94,7 @@ def norm(title):
 
 # מפתח -> (שמות תצוגה, שמות במקורות). השמות הראשונים הם הכינויים שהאפליקציה מכירה (ForkIlEpg).
 CANON = {
-    "kan11": (["Kan 11", "כאן 11", "ערוץ 11"], ["ערוץ 11", "כאן 11", "kan"]),
+    "kan11": (["Kan 11", "כאן 11", "ערוץ 11"], ["ערוץ 11", "כאן 11", "ערוץ 11 כאן", "kan"]),
     "keshet12": (["Keshet 12", "קשת 12", "ערוץ 12"], ["ערוץ 12", "קשת 12", "קשת", "keshet"]),
     "reshet13": (["Reshet 13", "רשת 13", "ערוץ 13"], ["ערוץ 13", "רשת 13", "רשת", "reshet"]),
     "now14": (["Now 14", "עכשיו 14", "ערוץ 14"], ["ערוץ 14", "channel 14"]),
@@ -85,11 +114,12 @@ CANON = {
     "sport3": (["ספורט 3", "Sport 3 Israel"], ["ספורט 3", "sport 3"]),
     "sport4": (["ספורט 4", "Sport 4 Israel"], ["ספורט 4", "sport 4"]),
     "sport6": (["ספורט 6", "Sport 6 Israel"], ["ספורט 6", "sport 6"]),
-    "sport5": (["Sport 5", "ספורט 5"], ["sport5", "sport 5"]),
-    "sport5plus": (["Sport 5 Plus", "ספורט 5 פלוס"], ["sport 5 plus", "sport 5+"]),
-    "sport5gold": (["Sport 5 Gold", "ספורט 5 גולד"], ["sport 5 gold"]),
-    "sport5live": (["Sport 5 Live", "ספורט 5 לייב"], ["sport 5 live"]),
-    "sport5stars": (["Sport 5 Stars", "ספורט 5 סטארס"], ["sport 5 stars"]),
+    # EPGShare קורא למשפחת ספורט 5 "5GOLD", "5LIVE", "5PLUS", "5SPORT", "5STARS".
+    "sport5": (["Sport 5", "ספורט 5"], ["sport5", "sport 5", "5sport"]),
+    "sport5plus": (["Sport 5 Plus", "ספורט 5 פלוס"], ["sport 5 plus", "sport 5+", "5plus", "ספורט 5 פלוס לייב"]),
+    "sport5gold": (["Sport 5 Gold", "ספורט 5 גולד"], ["sport 5 gold", "5gold", "ספורט 5 גולד"]),
+    "sport5live": (["Sport 5 Live", "ספורט 5 לייב"], ["sport 5 live", "5live", "ספורט 5 לייב"]),
+    "sport5stars": (["Sport 5 Stars", "ספורט 5 סטארס"], ["sport 5 stars", "5stars", "ספורט 5 סטארס"]),
     "sport5max": (["Sport 5 MAX", "ספורט 5 מקס"], ["sport 5 max"]),
     "sport54k": (["Sport 5 4K", "ספורט 5 4K"], ["sport 5 4k"]),
     "eurosport1": (["יורוספורט 1", "Eurosport 1 Israel"], ["eurosport 1", "eurosport"]),
@@ -140,6 +170,16 @@ CANON = {
     "freetvcooking": (["FreeTV אוכל", "FreeTV Cooking"], ["freetv אוכל"]),
     "freetvlifestyle": (["FreeTV לייף סטייל", "FreeTV Lifestyle"], ["freetv לייף סטייל"]),
     "freetvglobal": (["FreeTV גלובל", "FreeTV Global", "Free Global"], ["freetv גלובל"]),
+    # הערוצים שרק EPGShare ו-Open-EPG מכסים (נמדד 11.11.2026). בלי מפתח כאן הם נכנסים כ-"x.<שם>",
+    # בלי שם עברי ובלי שהאפליקציה מזהה אותם מול שמות הערוצים של ספק ה-IPTV.
+    "hotcinema1": (["הוט סינמה 1", "HOT Cinema 1"], ["הוט סינמה 1", "hot cinema 1"]),
+    "hotcinema2": (["הוט סינמה 2", "HOT Cinema 2"], ["הוט סינמה 2", "hot cinema 2"]),
+    "hotcinema3": (["הוט סינמה 3", "HOT Cinema 3"], ["הוט סינמה 3", "hot cinema 3"]),
+    "hotisraeli": (["הוט בידור ישראלי", "HOT Israeli Entertainment"], ["הוט בידור ישראלי"]),
+    "aljazeera": (["אל ג'זירה", "Al Jazeera"], ["אל ג'זירה", "al jazeera"]),
+    "mtv": (["MTV", "אם טי וי"], ["mtv"]),
+    "dwrussian": (["DW רוסית", "DW Russian"], ["dw רוסית", "dw russian"]),
+    "israel33": (["ישראל 33", "Israel 33"], ["ישראל 33", "israel 33"]),
 }
 BY_SOURCE_NAME = {}
 for key, (_, names) in CANON.items():
@@ -348,7 +388,66 @@ def yes(now, skip_keys):
 
 # ------------------------------------------------------------------ איחוד וכתיבה
 
-PRIORITY = {"freetv": 0, "cellcom": 1, "yes": 2}
+# ------------------------------------------------------------------ מקורות XMLTV חיצוניים
+
+# שני הלוחות שהאפליקציה הוסיפה עד היום בנפרד. כאן הם נכנסים כמקור ככל מקור אחר, כדי שבמכשיר יישאר מדריך אחד.
+EPGSHARE_URL = "https://epgshare01.online/epgshare01/epg_ripper_IL1.xml.gz"
+OPENEPG_URL = "https://www.open-epg.com/files/israel1.xml.gz"
+
+XMLTV_TIME = re.compile(r"^(\d{14})(?:\s*([+-]\d{4}))?")
+
+
+def xmltv_parse_time(s):
+    """20261111180000 +0200 -> datetime ב-UTC. בלי אזור זמן נחשב UTC."""
+    m = XMLTV_TIME.match((s or "").strip())
+    if not m:
+        return None
+    t = dt.datetime.strptime(m.group(1), "%Y%m%d%H%M%S")
+    off = m.group(2)
+    if off:
+        delta = dt.timedelta(hours=int(off[1:3]), minutes=int(off[3:5]))
+        t = t.replace(tzinfo=dt.timezone(delta if off[0] == "+" else -delta))
+    else:
+        t = t.replace(tzinfo=UTC)
+    return t.astimezone(UTC)
+
+
+def xmltv_channels(raw, source):
+    """קובץ XMLTV -> ערוצים עם תוכניות. תוכנית שהערוץ שלה לא מוגדר בקובץ, וערוץ בלי תוכניות, נזרקים."""
+    chans = {}
+    for _, el in ET.iterparse(io.BytesIO(raw), events=("end",)):
+        if el.tag == "channel":
+            cid = el.get("id") or ""
+            name = next((d.text.strip() for d in el.findall("display-name") if (d.text or "").strip()), "")
+            icon = el.find("icon")
+            if cid and name and cid not in chans:
+                chans[cid] = Channel(source, cid, name, icon.get("src") if icon is not None else None)
+            el.clear()
+        elif el.tag == "programme":
+            ch = chans.get(el.get("channel") or "")
+            start, stop = xmltv_parse_time(el.get("start")), xmltv_parse_time(el.get("stop"))
+            title = (el.findtext("title") or "").strip()
+            if ch is not None and title and start and stop and stop > start:
+                desc = (el.findtext("desc") or "").strip()
+                icon = el.find("icon")
+                ch.programmes.append((start, stop, title, desc[:DESC_MAX] or None,
+                                      icon.get("src") if icon is not None else None,
+                                      (el.findtext("category") or "").strip() or None))
+            el.clear()
+    return [c for c in chans.values() if c.programmes]
+
+
+def epgshare(now):
+    return xmltv_channels(fetch_bytes(EPGSHARE_URL), "epgshare")
+
+
+def openepg(now):
+    return xmltv_channels(fetch_bytes(OPENEPG_URL), "openepg")
+
+
+# המקורות הישירים קודמים: הם מגיעים מהמפעיל עצמו. השניים החיצוניים נכנסים לערוץ שאין לו מקור ישיר,
+# או כשהם מגיעים חצי יום ומעלה רחוק יותר קדימה.
+PRIORITY = {"freetv": 0, "cellcom": 1, "yes": 2, "epgshare": 3, "openepg": 4}
 
 
 def pick(channels, now):
@@ -450,6 +549,10 @@ def main():
     channels += run("cellcom", cellcom)
     covered = {c.key for c in channels if c.last_stop() and c.last_stop() > now + dt.timedelta(days=6)}
     channels += run("yes", yes, covered)
+    # שני הלוחות החיצוניים אחרונים: הם מכסים ערוצים שאין לשלושת הראשונים (הוט סינמה, משפחת ספורט 5
+    # ועוד), ו-pick נותן להם ערוץ רק כשאין לו מקור ישיר או כשהם מגיעים רחוק יותר.
+    channels += run("epgshare", epgshare)
+    channels += run("openepg", openepg)
 
     # yes נפל? מספרי הערוצים מהריצה הקודמת (report.json בשורש המאגר, מגיע עם ה-checkout) במקום לפרסם קובץ בלעדיהם
     previous = {}
