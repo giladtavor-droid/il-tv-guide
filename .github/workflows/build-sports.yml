@@ -1,0 +1,44 @@
+# כל שלוש שעות: בונה את קובץ הספורט הישראלי (sports.py) ומפרסם אותו לשחרור "sports",
+# בכתובת קבועה שהאפליקציה קוראת:
+#   https://github.com/giladtavor-droid/il-tv-guide/releases/download/sports/il-sports.json
+#
+# למה בכלל: האפליקציה משכה את כל הספורט הישראלי ישירות מ-TheSportsDB, עם מפתח הבדיקה החינמי
+# ובלי גיבוי — ולכן הטבלאות הוצגו חתוכות ב-5 שורות והגביעים נגרדו מ-HTML. הצינור הזה מוריד את
+# תקרות הקצב מכל המכשירים ומחזיר טבלה מלאה, גביעים ושמות בעברית.
+#
+# הלייב (תוצאה ודקה תוך כדי משחק) לא עובר כאן: רענון של חמש שניות לא עובר דרך קובץ.
+# ריצה דלה מדי (מקור שנפל) נכשלת לפני הפרסום, כך שהקובץ הקודם נשאר.
+name: build-sports
+
+on:
+  schedule:
+    - cron: "10 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-sports
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test
+        run: python -m unittest test_sports
+      - name: Build
+        run: python sports.py dist
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view sports >/dev/null 2>&1 || \
+            gh release create sports --title "ספורט ישראלי" --notes "il-sports.json מתעדכן כל שלוש שעות: לוח, תוצאות וטבלאות של ליגת העל, הלאומית, הגביעים, ווינר וגביע ווינר."
+          gh release upload sports dist/il-sports.json --clobber
