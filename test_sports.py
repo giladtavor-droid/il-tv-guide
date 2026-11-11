@@ -56,6 +56,31 @@ class Games(unittest.TestCase):
         self.assertIsNone(g["away"]["score"])
         self.assertIsNone(g["minute"])
 
+    # ---------------------------------------------------------------- הפורמט שדף הספורט קורא
+
+    def test_the_state_is_the_one_the_app_knows(self):
+        games = sports.parse_games(GAMES_RAW)
+        self.assertEqual("post", games[0]["state"])
+        self.assertEqual("pre", games[1]["state"])
+
+    def test_a_score_is_written_only_when_there_is_one(self):
+        games = sports.parse_games(GAMES_RAW)
+        self.assertEqual((2, 2), (games[0]["hs"], games[0]["as"]))
+        self.assertNotIn("hs", games[1])
+
+    def test_the_start_time_is_written_the_way_the_app_reads_it(self):
+        self.assertEqual("2026-11-06T12:00:00Z", sports.parse_games(GAMES_RAW)[0]["start"])
+
+    def test_a_game_without_a_start_time_is_dropped(self):
+        raw = {"games": [{"id": 9, "startTime": "", "homeCompetitor": {"name": "a"}, "awayCompetitor": {"name": "b"}}]}
+        self.assertEqual([], sports.parse_games(raw))
+
+    def test_an_unknown_status_falls_back_to_the_score(self):
+        """קוד סטטוס שלא מוכר: תוצאה קיימת אומרת שהמשחק התחיל."""
+        started = {"games": [{"id": 9, "startTime": "2026-11-06T12:00:00+00:00", "statusGroup": 77,
+                              "homeCompetitor": {"name": "a", "score": 1.0}, "awayCompetitor": {"name": "b", "score": 0.0}}]}
+        self.assertEqual("in", sports.parse_games(started)[0]["state"])
+
     def test_the_minute_is_kept_only_while_it_means_something(self):
         self.assertEqual(sports.parse_games(GAMES_RAW)[0]["minute"], 90)
 

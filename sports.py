@@ -85,24 +85,54 @@ def _side(c):
             "score": _num(c.get("score")), "color": c.get("color")}
 
 
+# statusGroup של 365Scores, נמדד 11.11.2026: 2 טרם החל, 4 הסתיים (גם אחרי הארכה ופנדלים), 3 חי.
+# האפליקציה מכירה "pre" / "in" / "post" (אותם שמות שה-EuroLeague ושאר המקורות מחזירים).
+_STATE = {2: "pre", 3: "in", 4: "post"}
+
+
+def _state(g, home, away):
+    s = _STATE.get(g.get("statusGroup"))
+    if s:
+        return s
+    # קוד שלא מוכר: תוצאה קיימת אומרת שהמשחק לפחות התחיל.
+    return "in" if home.get("score") is not None or away.get("score") is not None else "pre"
+
+
+def _iso_z(s):
+    """365Scores מחזיר "+00:00"; האפליקציה קוראת "...Z"."""
+    s = (s or "").strip()
+    return (s[:19] + "Z") if len(s) >= 19 else None
+
+
 def parse_games(raw):
-    """תשובת games -> משחקים. משחק בלי שני צדדים נזרק."""
+    """תשובת games -> משחקים בפורמט שדף הספורט קורא. משחק בלי שני צדדים נזרק."""
     out = []
     for g in (raw or {}).get("games") or []:
         home, away = _side(g.get("homeCompetitor")), _side(g.get("awayCompetitor"))
         if not home or not away:
             continue
-        out.append({
+        start = _iso_z(g.get("startTime"))
+        if not start:
+            continue
+        state = _state(g, home, away)
+        e = {
             "id": g.get("id"),
             "comp": g.get("competitionId"),
             "sport": g.get("sportId"),
-            "start": g.get("startTime"),
+            "start": start,
+            "hasTime": True,
+            "state": state,
             "status": g.get("statusText"),
             "minute": _num(g.get("gameTime")),
             "round": g.get("roundNum"),
             "home": home,
             "away": away,
-        })
+        }
+        # תוצאה נכתבת רק כשיש מה לכתוב, כמו בשאר המקורות.
+        if state != "pre" and (home.get("score") is not None or away.get("score") is not None):
+            e["hs"] = home.get("score") or 0
+            e["as"] = away.get("score") or 0
+        out.append(e)
     return out
 
 
