@@ -1,35 +1,35 @@
 {
- "built": "2026-11-14T07:53:32+00:00",
+ "built": "2026-11-14T18:48:45+00:00",
  "sources": {
   "freetv": {
    "channels": 71,
-   "programmes": 26990,
-   "seconds": 10.5,
+   "programmes": 27194,
+   "seconds": 12.9,
    "until": "2026-11-29T23:39+00:00"
   },
   "cellcom": {
    "channels": 145,
-   "programmes": 35542,
-   "seconds": 18.6,
+   "programmes": 33690,
+   "seconds": 18.3,
    "until": "2026-11-30T21:59+00:00"
   },
   "yes": {
    "channels": 130,
-   "programmes": 29617,
-   "seconds": 35.1,
+   "programmes": 29631,
+   "seconds": 37.2,
    "until": "2026-11-21T00:50+00:00"
   },
   "epgshare": {
    "channels": 109,
-   "programmes": 10776,
-   "seconds": 0.5,
-   "until": "2026-11-16T22:00+00:00"
+   "programmes": 10325,
+   "seconds": 0.6,
+   "until": "2026-11-18T01:00+00:00"
   },
   "openepg": {
    "channels": 38,
-   "programmes": 2349,
-   "seconds": 1.0,
-   "until": "2026-11-15T10:30+00:00"
+   "programmes": 1987,
+   "seconds": 2.2,
+   "until": "2026-11-16T01:50+00:00"
   }
  },
  "yes_numbers": {
@@ -558,7 +558,7 @@
  },
  "yes_numbers_from_previous_run": false,
  "channels": 299,
- "programmes": 78954,
+ "programmes": 77800,
  "per_channel": {
   "baby": {
    "source": "yes",
@@ -578,7 +578,7 @@
   "ch9": {
    "source": "freetv",
    "title": "ערוץ 9",
-   "until": "2026-11-20T22:35+00:00"
+   "until": "2026-11-27T22:45+00:00"
   },
   "daystar": {
    "source": "freetv",
@@ -608,7 +608,7 @@
   "echannel": {
    "source": "epgshare",
    "title": "ערוץ הבידור E",
-   "until": "2026-11-16T00:00+00:00"
+   "until": "2026-11-17T00:00+00:00"
   },
   "ego": {
    "source": "yes",
@@ -708,7 +708,7 @@
   "ftv": {
    "source": "epgshare",
    "title": "ערוץ האופנה FTV שידור חי",
-   "until": "2026-11-16T06:15+00:00"
+   "until": "2026-11-17T06:15+00:00"
   },
   "history": {
    "source": "yes",
@@ -728,22 +728,22 @@
   "hotcinema1": {
    "source": "openepg",
    "title": "הוט סינמה 1.il",
-   "until": "2026-11-15T09:24+00:00"
+   "until": "2026-11-16T01:48+00:00"
   },
   "hotcinema2": {
    "source": "openepg",
    "title": "הוט סינמה 2.il",
-   "until": "2026-11-15T09:54+00:00"
+   "until": "2026-11-16T01:19+00:00"
   },
   "hotcinema3": {
    "source": "openepg",
    "title": "הוט סינמה 3.il",
-   "until": "2026-11-15T09:53+00:00"
+   "until": "2026-11-16T01:13+00:00"
   },
   "hotisraeli": {
    "source": "epgshare",
    "title": "הוט בידור ישראלי",
-   "until": "2026-11-16T00:07+00:00"
+   "until": "2026-11-17T00:07+00:00"
   },
   "i24ar": {
    "source": "yes",
@@ -758,7 +758,7 @@
   "i24fr": {
    "source": "cellcom",
    "title": "i24NEWS FRENCH",
-   "until": "2026-11-30T08:00+00:00"
+   "until": "2026-11-30T19:00+00:00"
   },
   "i24he": {
    "source": "freetv",
@@ -933,12 +933,12 @@
   "viva": {
    "source": "epgshare",
    "title": "ערוץ ויוה שידור חי",
-   "until": "2026-11-16T00:25+00:00"
+   "until": "2026-11-17T00:25+00:00"
   },
   "vivapremium": {
    "source": "epgshare",
    "title": "ויוה פרימיום",
-   "until": "2026-11-16T05:22+00:00"
+   "until": "2026-11-17T05:24+00:00"
   },
   "x.": {
    "source": "cellcom",
@@ -1013,7 +1013,7 @@
   "x.bober": {
    "source": "cellcom",
    "title": "Бобёр - bober",
-   "until": "2026-11-23T21:59+00:00"
+   "until": "2026-11-23T22:40+00:00"
   },
   "x.bollywoodmovies": {
    "source": "yes",
@@ -1078,7 +1078,7 @@
   "x.ctc": {
    "source": "yes",
    "title": "CTC",
-   "until": "2026-11-20T04:40+00:00"
+   "until": "2026-11-21T00:00+00:00"
   },
   "x.dailydrama": {
    "source": "yes",
@@ -1178,7 +1178,7 @@
   "x.gbnews": {
    "source": "cellcom",
    "title": "GBNews",
-   "until": "2026-11-30T09:30+00:00"
+   "until": "2026-11-30T19:00+00:00"
   },
   "x.goodlife+": {
    "source": "cellcom",
@@ -1478,7 +1478,7 @@
   "x.sportedge": {
    "source": "cellcom",
    "title": "SPORT EDGE",
-   "until": "2026-11-30T08:34+00:00"
+   "until": "2026-11-30T19:17+00:00"
   },
   "x.stylechannel": {
    "source": "yes",
@@ -1488,7 +1488,7 @@
   "x.telecafe": {
    "source": "yes",
    "title": "TELECAFE",
-   "until": "2026-11-20T05:30+00:00"
+   "until": "2026-11-20T22:00+00:00"
   },
   "x.tht": {
    "source": "cellcom",
@@ -1818,12 +1818,12 @@
   "x.ערוץ3": {
    "source": "epgshare",
    "title": "ערוץ 3 שידור חי",
-   "until": "2026-11-16T00:06+00:00"
+   "until": "2026-11-17T00:06+00:00"
   },
   "x.ערוץ8": {
    "source": "epgshare",
    "title": "ערוץ 8 שידור חי",
-   "until": "2026-11-16T00:10+00:00"
+   "until": "2026-11-17T00:10+00:00"
   },
   "x.ערוץארץנהדרת": {
    "source": "freetv",
