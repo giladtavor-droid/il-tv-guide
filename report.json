@@ -1,35 +1,35 @@
 {
- "built": "2026-11-16T22:58:46+00:00",
+ "built": "2026-11-17T09:36:30+00:00",
  "sources": {
   "freetv": {
    "channels": 71,
-   "programmes": 25077,
-   "seconds": 10.1,
+   "programmes": 25344,
+   "seconds": 15.3,
    "until": "2026-12-02T23:39+00:00"
   },
   "cellcom": {
    "channels": 143,
-   "programmes": 34111,
-   "seconds": 15.2,
-   "until": "2026-12-02T23:20+00:00"
+   "programmes": 32998,
+   "seconds": 18.8,
+   "until": "2026-12-03T12:00+00:00"
   },
   "yes": {
-   "channels": 147,
-   "programmes": 30418,
-   "seconds": 37.5,
+   "channels": 145,
+   "programmes": 30528,
+   "seconds": 42.1,
    "until": "2026-11-24T00:35+00:00"
   },
   "epgshare": {
    "channels": 109,
    "programmes": 10399,
-   "seconds": 1.0,
+   "seconds": 0.5,
    "until": "2026-11-20T00:45+00:00"
   },
   "openepg": {
    "channels": 38,
-   "programmes": 2145,
-   "seconds": 1.0,
-   "until": "2026-11-18T01:40+00:00"
+   "programmes": 4581,
+   "seconds": 1.8,
+   "until": "2026-11-19T11:07+00:00"
   }
  },
  "yes_numbers": {
@@ -558,7 +558,7 @@
  },
  "yes_numbers_from_previous_run": false,
  "channels": 299,
- "programmes": 74456,
+ "programmes": 74638,
  "per_channel": {
   "baby": {
    "source": "freetv",
@@ -606,9 +606,9 @@
    "until": "2026-11-19T05:30+00:00"
   },
   "echannel": {
-   "source": "epgshare",
-   "title": "ערוץ הבידור E",
-   "until": "2026-11-19T00:21+00:00"
+   "source": "openepg",
+   "title": "E ערוץ הבידור.il",
+   "until": "2026-11-19T09:57+00:00"
   },
   "ego": {
    "source": "yes",
@@ -623,7 +623,7 @@
   "eurosport2": {
    "source": "cellcom",
    "title": "Eurosport 2",
-   "until": "2026-11-21T21:59+00:00"
+   "until": "2026-11-28T21:59+00:00"
   },
   "foodchannel": {
    "source": "yes",
@@ -728,22 +728,22 @@
   "hotcinema1": {
    "source": "openepg",
    "title": "הוט סינמה 1.il",
-   "until": "2026-11-18T00:16+00:00"
+   "until": "2026-11-19T10:54+00:00"
   },
   "hotcinema2": {
    "source": "openepg",
    "title": "הוט סינמה 2.il",
-   "until": "2026-11-18T00:44+00:00"
+   "until": "2026-11-19T09:40+00:00"
   },
   "hotcinema3": {
    "source": "openepg",
    "title": "הוט סינמה 3.il",
-   "until": "2026-11-18T00:58+00:00"
+   "until": "2026-11-19T11:07+00:00"
   },
   "hotisraeli": {
-   "source": "epgshare",
-   "title": "הוט בידור ישראלי",
-   "until": "2026-11-19T00:11+00:00"
+   "source": "openepg",
+   "title": "הוט בידור ישראלי.il",
+   "until": "2026-11-19T09:51+00:00"
   },
   "i24ar": {
    "source": "cellcom",
@@ -776,9 +776,9 @@
    "until": "2026-11-27T22:00+00:00"
   },
   "kanedu": {
-   "source": "freetv",
-   "title": "חינוכית",
-   "until": "2026-12-02T23:20+00:00"
+   "source": "cellcom",
+   "title": "כאן חינוכית",
+   "until": "2026-12-03T09:48+00:00"
   },
   "keshet12": {
    "source": "freetv",
@@ -786,9 +786,9 @@
    "until": "2026-11-22T22:00+00:00"
   },
   "knesset": {
-   "source": "freetv",
+   "source": "cellcom",
    "title": "ערוץ הכנסת",
-   "until": "2026-11-22T22:00+00:00"
+   "until": "2026-11-29T21:59+00:00"
   },
   "luli": {
    "source": "yes",
@@ -806,9 +806,9 @@
    "until": "2026-11-24T00:00+00:00"
   },
   "music24": {
-   "source": "cellcom",
-   "title": "מוסיקה 24",
-   "until": "2026-11-27T21:59+00:00"
+   "source": "freetv",
+   "title": "Music 24",
+   "until": "2026-11-27T22:00+00:00"
   },
   "natgeo": {
    "source": "cellcom",
@@ -931,9 +931,9 @@
    "until": "2026-11-23T22:32+00:00"
   },
   "viva": {
-   "source": "epgshare",
-   "title": "ערוץ ויוה שידור חי",
-   "until": "2026-11-19T00:20+00:00"
+   "source": "openepg",
+   "title": "ערוץ ויוה.il",
+   "until": "2026-11-19T09:45+00:00"
   },
   "vivapremium": {
    "source": "epgshare",
@@ -988,7 +988,7 @@
   "x.animalplanet": {
    "source": "cellcom",
    "title": "animal planet",
-   "until": "2026-12-02T23:00+00:00"
+   "until": "2026-12-03T10:15+00:00"
   },
   "x.aplus": {
    "source": "freetv",
@@ -1108,7 +1108,7 @@
   "x.e": {
    "source": "cellcom",
    "title": "E!",
-   "until": "2026-12-02T23:07+00:00"
+   "until": "2026-12-03T09:43+00:00"
   },
   "x.eco99fm": {
    "source": "cellcom",
@@ -1178,7 +1178,7 @@
   "x.gbnews": {
    "source": "cellcom",
    "title": "GBNews",
-   "until": "2026-12-02T23:00+00:00"
+   "until": "2026-12-03T12:00+00:00"
   },
   "x.goodlife+": {
    "source": "cellcom",
@@ -1253,7 +1253,7 @@
   "x.israelistage": {
    "source": "yes",
    "title": "Israeli Stage",
-   "until": "2026-11-22T02:01+00:00"
+   "until": "2026-11-23T22:00+00:00"
   },
   "x.jimjam": {
    "source": "yes",
@@ -1268,7 +1268,7 @@
   "x.kehilaty": {
    "source": "yes",
    "title": "Kehilaty (98)",
-   "until": "2026-11-19T23:56+00:00"
+   "until": "2026-11-23T22:00+00:00"
   },
   "x.kidsstarschannel": {
    "source": "yes",
@@ -1303,7 +1303,7 @@
   "x.mediterraneanchannel2": {
    "source": "yes",
    "title": "Mediterranean Channel 2",
-   "until": "2026-11-22T05:53+00:00"
+   "until": "2026-11-23T22:02+00:00"
   },
   "x.mediterraneanmovies1": {
    "source": "yes",
@@ -1403,7 +1403,7 @@
   "x.perviikanal": {
    "source": "cellcom",
    "title": "Первый канал - pervii kanal",
-   "until": "2026-11-23T22:00+00:00"
+   "until": "2026-11-27T23:45+00:00"
   },
   "x.popupx": {
    "source": "yes",
@@ -1673,12 +1673,12 @@
   "x.יםתיכוני+": {
    "source": "cellcom",
    "title": "ים תיכוני +",
-   "until": "2026-11-22T21:59+00:00"
+   "until": "2026-11-29T21:59+00:00"
   },
   "x.יםתיכוני2": {
    "source": "cellcom",
    "title": "ים תיכוני 2",
-   "until": "2026-11-22T21:59+00:00"
+   "until": "2026-11-29T21:59+00:00"
   },
   "x.כאן88": {
    "source": "cellcom",
@@ -1816,14 +1816,14 @@
    "until": "2026-11-28T22:00+00:00"
   },
   "x.ערוץ3": {
-   "source": "epgshare",
-   "title": "ערוץ 3 שידור חי",
-   "until": "2026-11-19T00:34+00:00"
+   "source": "openepg",
+   "title": "ערוץ 3.il",
+   "until": "2026-11-19T09:59+00:00"
   },
   "x.ערוץ8": {
-   "source": "epgshare",
-   "title": "ערוץ 8 שידור חי",
-   "until": "2026-11-19T00:33+00:00"
+   "source": "openepg",
+   "title": "ערוץ 8.il",
+   "until": "2026-11-19T10:25+00:00"
   },
   "x.ערוץארץנהדרת": {
    "source": "freetv",
