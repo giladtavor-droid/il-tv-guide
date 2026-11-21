@@ -1,35 +1,35 @@
 {
- "built": "2026-11-21T08:38:26+00:00",
+ "built": "2026-11-21T20:12:07+00:00",
  "sources": {
   "freetv": {
    "channels": 0,
    "programmes": 0,
-   "seconds": 10.5,
+   "seconds": 10.6,
    "until": null
   },
   "cellcom": {
    "channels": 143,
-   "programmes": 32285,
-   "seconds": 17.1,
+   "programmes": 30344,
+   "seconds": 14.6,
    "until": "2026-12-07T21:59+00:00"
   },
   "yes": {
    "channels": 136,
-   "programmes": 31215,
-   "seconds": 40.6,
+   "programmes": 31326,
+   "seconds": 39.0,
    "until": "2026-11-28T00:35+00:00"
   },
   "epgshare": {
    "channels": 107,
-   "programmes": 9855,
-   "seconds": 0.4,
-   "until": "2026-11-23T22:15+00:00"
+   "programmes": 9857,
+   "seconds": 0.3,
+   "until": "2026-11-24T06:15+00:00"
   },
   "openepg": {
    "channels": 38,
-   "programmes": 2085,
-   "seconds": 1.4,
-   "until": "2026-11-22T02:16+00:00"
+   "programmes": 1659,
+   "seconds": 16.1,
+   "until": "2026-11-23T12:00+00:00"
   }
  },
  "yes_numbers": {
@@ -558,7 +558,7 @@
  },
  "yes_numbers_from_previous_run": false,
  "channels": 267,
- "programmes": 61349,
+ "programmes": 59571,
  "per_channel": {
   "baby": {
    "source": "yes",
@@ -603,7 +603,7 @@
   "echannel": {
    "source": "epgshare",
    "title": "ערוץ הבידור E",
-   "until": "2026-11-23T00:27+00:00"
+   "until": "2026-11-24T00:25+00:00"
   },
   "ego": {
    "source": "yes",
@@ -633,7 +633,7 @@
   "ftv": {
    "source": "epgshare",
    "title": "ערוץ האופנה FTV שידור חי",
-   "until": "2026-11-23T06:15+00:00"
+   "until": "2026-11-24T06:15+00:00"
   },
   "history": {
    "source": "yes",
@@ -668,7 +668,7 @@
   "hotisraeli": {
    "source": "epgshare",
    "title": "הוט בידור ישראלי",
-   "until": "2026-11-23T00:05+00:00"
+   "until": "2026-11-23T00:11+00:00"
   },
   "i24ar": {
    "source": "yes",
@@ -858,12 +858,12 @@
   "viva": {
    "source": "epgshare",
    "title": "ערוץ ויוה שידור חי",
-   "until": "2026-11-23T00:06+00:00"
+   "until": "2026-11-24T00:16+00:00"
   },
   "vivapremium": {
    "source": "epgshare",
    "title": "ויוה פרימיום",
-   "until": "2026-11-23T05:31+00:00"
+   "until": "2026-11-24T05:33+00:00"
   },
   "x.": {
    "source": "cellcom",
@@ -948,7 +948,7 @@
   "x.carousel": {
    "source": "yes",
    "title": "Carousel",
-   "until": "2026-11-27T04:00+00:00"
+   "until": "2026-11-27T22:30+00:00"
   },
   "x.cgtn": {
    "source": "yes",
@@ -963,7 +963,7 @@
   "x.channel1rus": {
    "source": "yes",
    "title": "Channel 1 Rus",
-   "until": "2026-11-27T23:45+00:00"
+   "until": "2026-11-27T22:30+00:00"
   },
   "x.childhood": {
    "source": "yes",
@@ -1016,9 +1016,9 @@
    "until": "2026-11-30T21:59+00:00"
   },
   "x.domkinopremium": {
-   "source": "cellcom",
+   "source": "yes",
    "title": "Dom Kino Premium",
-   "until": "2026-11-23T21:59+00:00"
+   "until": "2026-11-27T22:30+00:00"
   },
   "x.e": {
    "source": "cellcom",
@@ -1083,7 +1083,7 @@
   "x.gbnews": {
    "source": "cellcom",
    "title": "GBNews",
-   "until": "2026-12-07T09:30+00:00"
+   "until": "2026-12-07T21:00+00:00"
   },
   "x.goodlife+": {
    "source": "cellcom",
@@ -1323,7 +1323,7 @@
   "x.raz3": {
    "source": "yes",
    "title": "RAZ 3 (Kvartal)",
-   "until": "2026-11-27T04:15+00:00"
+   "until": "2026-11-27T23:00+00:00"
   },
   "x.realitychannel": {
    "source": "yes",
@@ -1393,7 +1393,7 @@
   "x.telecafe": {
    "source": "yes",
    "title": "TELECAFE",
-   "until": "2026-11-27T04:00+00:00"
+   "until": "2026-11-27T22:15+00:00"
   },
   "x.tht": {
    "source": "cellcom",
@@ -1628,7 +1628,7 @@
   "x.מוזיקהil": {
    "source": "cellcom",
    "title": "מוזיקה il",
-   "until": "2026-12-07T09:30+00:00"
+   "until": "2026-12-07T21:00+00:00"
   },
   "x.סלקום+דוקו": {
    "source": "cellcom",
@@ -1688,12 +1688,12 @@
   "x.ערוץ3": {
    "source": "epgshare",
    "title": "ערוץ 3 שידור חי",
-   "until": "2026-11-23T00:07+00:00"
+   "until": "2026-11-24T00:11+00:00"
   },
   "x.ערוץ8": {
    "source": "epgshare",
    "title": "ערוץ 8 שידור חי",
-   "until": "2026-11-23T00:32+00:00"
+   "until": "2026-11-23T00:00+00:00"
   },
   "x.ערוץדוקופשע": {
    "source": "cellcom",
