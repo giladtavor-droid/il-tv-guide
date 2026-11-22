@@ -1,102 +1,90 @@
 # לוח שידורים ישראלי — דוח ריצה
 
-נבנה: 2026-11-22T08:35:04+00:00
+נבנה: 2026-11-22T20:26:22+00:00
 
 | מקור | ערוצים | תוכניות | עד |
 |---|---|---|---|
-| freetv | 71 | 24031 | 2026-12-07 23:46 |
-| cellcom | 143 | 31693 | 2026-12-08 09:30 |
-| yes | 127 | 27098 | 2026-11-29 00:35 |
-| epgshare | 107 | 9857 | 2026-11-24 06:15 |
-| openepg | 38 | 1659 | 2026-11-23 12:00 |
+| freetv | 0 | 0 | - |
+| cellcom | 143 | 31201 | 2026-12-08 21:00 |
+| yes | 129 | 28854 | 2026-11-29 00:35 |
+| epgshare | 107 | 9909 | 2026-11-25 06:15 |
+| openepg | 38 | 1984 | 2026-11-24 02:00 |
 
 | מפתח | שמות תצוגה | מקור | עד | ימים קדימה |
 |---|---|---|---|---|
 | baby | בייבי · Baby · yes 81 | cellcom | 2026-11-29 22:00 | 7 |
 | ch16 | ערוץ 16 · Channel 16 · yes 16 | yes | 2026-11-28 22:00 | 6 |
 | ch23 | ערוץ 23 רק ישראלי · 23 Only Israeli · yes 23 | cellcom | 2026-11-29 21:59 | 7 |
-| ch9 | ישראל פלוס · Israel Plus · ערוץ 9 · yes 9 | freetv | 2026-12-04 22:00 | 12 |
-| daystar | DAYSTAR · yes 48 | yes | 2026-11-28 22:00 | 6 |
+| ch9 | ישראל פלוס · Israel Plus · ערוץ 9 · yes 9 | cellcom | 2026-12-04 22:00 | 12 |
+| daystar | DAYSTAR · yes 48 | cellcom | 2026-12-04 21:59 | 12 |
 | discovery | דיסקברי · Discovery Channel · Discovery · yes 42 | cellcom | 2026-11-29 22:05 | 7 |
 | disney | דיסני · Disney Channel · Disney · yes 89 | cellcom | 2026-11-29 22:06 | 7 |
 | disneyjunior | דיסני ג'וניור · Disney Junior · yes 84 | cellcom | 2026-11-29 22:10 | 7 |
-| echannel | ערוץ הבידור E · E! Entertainment | epgshare | 2026-11-24 00:25 | 1 |
+| echannel | ערוץ הבידור E · E! Entertainment | epgshare | 2026-11-25 00:25 | 2 |
 | ego | אגו · EGO · yes 117 | yes | 2026-11-28 22:18 | 6 |
-| eurosport1 | יורוספורט 1 · Eurosport 1 Israel · Eurosport 1 · yes 61 | cellcom | 2026-11-29 22:00 | 7 |
+| eurosport1 | יורוספורט 1 · Eurosport 1 Israel · Eurosport 1 · yes 61 | cellcom | 2026-12-05 21:59 | 13 |
 | eurosport2 | יורוספורט 2 · Eurosport 2 Israel · Eurosport 2 · yes 62 | cellcom | 2026-11-28 21:59 | 6 |
 | foodchannel | ערוץ האוכל · Food Channel · yes 73 | yes | 2026-11-28 22:21 | 6 |
 | foody | FOODY · yes 212 | cellcom | 2026-11-29 21:59 | 7 |
-| freetvcooking | FreeTV אוכל · FreeTV Cooking | freetv | 2026-12-05 04:17 | 12 |
-| freetvdocu | FreeTV דוקו · FreeTV Docu | freetv | 2026-12-05 04:20 | 12 |
-| freetvglobal | FreeTV גלובל · FreeTV Global · Free Global | freetv | 2026-12-05 04:58 | 12 |
-| freetvlifestyle | FreeTV לייף סטייל · FreeTV Lifestyle | freetv | 2026-12-05 04:36 | 12 |
-| freetvmoviesaction | FreeTV סרטים פעולה · FreeTV Movies Action · Free Movies Action | freetv | 2026-12-05 06:16 | 12 |
-| freetvmoviescomedy | FreeTV סרטים קומדיה · FreeTV Movies Comedy · FreeTV Movies Comdey · Free Movies Comedy | freetv | 2026-12-05 05:00 | 12 |
-| freetvmoviesdrama | FreeTV סרטים דרמה · FreeTV Movies Drama · Free Movies Drama | freetv | 2026-12-05 05:24 | 12 |
-| freetvmoviesfamily | FreeTV סרטים משפחה · FreeTV Movies Family · Free Movies Family | freetv | 2026-12-05 04:48 | 12 |
-| freetvmovieshorror | FreeTV סרטים אימה · FreeTV Movies Horror · Free Movies Horror | freetv | 2026-12-05 19:30 | 13 |
-| freetvmoviesisraeli | FreeTV סרטים ישראלי · FreeTV Movies Israeli · Free Israeli Movies | freetv | 2026-12-05 04:54 | 12 |
-| freetvmoviesromance | FreeTV סרטים רומנטי · FreeTV Movies Romantic · Free Movies Romance | freetv | 2026-12-05 04:51 | 12 |
-| freetvmoviesthriller | FreeTV סרטים מתח · FreeTV Movies Thriller · Free Movies Thriller | freetv | 2026-12-05 04:36 | 12 |
-| freetvseriescomedy | FreeTV סדרות קומדיה · FreeTV Comedy | freetv | 2026-12-05 04:07 | 12 |
-| freetvseriesdrama | FreeTV סדרות דרמה · FreeTV Drama · FreeTV TV Series | freetv | 2026-12-05 04:25 | 12 |
-| ftv | ערוץ האופנה FTV · Fashion TV · ערוץ האופנה FTV שידור חי | epgshare | 2026-11-24 06:15 | 1 |
+| ftv | ערוץ האופנה FTV · Fashion TV · ערוץ האופנה FTV שידור חי | epgshare | 2026-11-25 06:15 | 2 |
 | history | היסטוריה · History Channel · History · History SD · yes 44 · yes 45 | yes | 2026-11-28 22:23 | 6 |
 | hop | הופ · HOP · yes 82 | yes | 2026-11-29 00:35 | 6 |
 | hopchildhood | הופ ילדות · HOP Childhood · HOP! Childhood · yes 83 | yes | 2026-11-28 22:00 | 6 |
-| hotisraeli | הוט בידור ישראלי · HOT Israeli Entertainment | epgshare | 2026-11-23 00:11 | 0 |
+| hotcinema1 | הוט סינמה 1 · HOT Cinema 1 · הוט סינמה 1.il | openepg | 2026-11-22 23:44 | 0 |
+| hotcinema2 | הוט סינמה 2 · HOT Cinema 2 · הוט סינמה 2.il | openepg | 2026-11-22 23:33 | 0 |
+| hotcinema3 | הוט סינמה 3 · HOT Cinema 3 · הוט סינמה 3.il | openepg | 2026-11-22 23:10 | 0 |
+| hotisraeli | הוט בידור ישראלי · HOT Israeli Entertainment | epgshare | 2026-11-24 00:11 | 1 |
 | i24ar | i24NEWS Arabic · i24 Arabic · yes 119 | cellcom | 2026-11-29 22:30 | 7 |
-| i24en | i24NEWS English · i24 English · yes 118 | freetv | 2026-12-02 22:00 | 10 |
-| i24fr | i24NEWS French · i24 French | freetv | 2026-12-01 22:00 | 9 |
-| i24he | i24 עברית · i24NEWS Hebrew · i24NEWS · yes 15 | freetv | 2026-11-29 22:00 | 7 |
-| junior | ג'וניור · Junior · yes 93 | freetv | 2026-11-29 22:00 | 7 |
-| kan11 | כאן 11 · Kan 11 · ערוץ 11 · yes 11 · yes 311 · yes 511 | freetv | 2026-12-04 22:00 | 12 |
-| kanedu | כאן חינוכית · Kan Educational · חינוכית · yes 80 | freetv | 2026-12-06 22:00 | 14 |
-| keshet12 | קשת 12 · Keshet 12 · ערוץ 12 · yes 12 · yes 312 · yes 612 | freetv | 2026-11-29 22:00 | 7 |
-| knesset | ערוץ הכנסת · Knesset · yes 99 | freetv | 2026-11-29 22:00 | 7 |
-| luli | לולי · Luli · yes 95 | yes | 2026-11-27 04:02 | 4 |
-| makan | מכאן · Makan 33 · Makan · yes 33 | freetv | 2026-11-29 22:00 | 7 |
+| i24en | i24NEWS English · i24 English · yes 118 | cellcom | 2026-11-29 22:00 | 7 |
+| i24fr | i24NEWS French · i24 French | cellcom | 2026-12-01 21:59 | 9 |
+| i24he | i24 עברית · i24NEWS Hebrew · i24NEWS · עברית i24 · yes 15 | cellcom | 2026-11-29 21:59 | 7 |
+| junior | ג'וניור · Junior · yes 93 | cellcom | 2026-11-29 21:59 | 7 |
+| kan11 | כאן 11 · Kan 11 · ערוץ 11 · yes 11 · yes 311 · yes 511 | cellcom | 2026-12-04 21:59 | 12 |
+| kanedu | כאן חינוכית · Kan Educational · חינוכית · yes 80 | cellcom | 2026-12-06 21:59 | 14 |
+| keshet12 | קשת 12 · Keshet 12 · ערוץ 12 · קשת · yes 12 · yes 312 · yes 612 | cellcom | 2026-11-29 21:59 | 7 |
+| knesset | ערוץ הכנסת · Knesset · yes 99 | cellcom | 2026-11-29 21:59 | 7 |
+| luli | לולי · Luli · yes 95 | yes | 2026-11-28 22:21 | 6 |
+| makan | מכאן · Makan 33 · Makan · yes 33 | cellcom | 2026-11-29 21:59 | 7 |
 | mtv | אם טי וי · MTV · MTV (MTV Music) · yes 204 | yes | 2026-11-29 00:00 | 6 |
-| music24 | מוזיקה 24 · Music 24 · Channel 24 Music · yes 24 | freetv | 2026-11-27 22:00 | 5 |
+| music24 | מוזיקה 24 · Music 24 · Channel 24 Music · מוסיקה 24 · yes 24 | cellcom | 2026-11-27 21:59 | 5 |
 | natgeo | נשיונל גיאוגרפיק · National Geographic · נשיונל ג'יאוגרפיק | cellcom | 2026-11-29 22:00 | 7 |
 | natgeowild | נשיונל גיאוגרפיק WILD · Nat Geo Wild · נשיונל ג'יאוגרפיק WILD | cellcom | 2026-11-29 22:05 | 7 |
 | nickelodeon | ניקלודיאון · Nickelodeon · yes 91 | yes | 2026-11-28 22:13 | 6 |
 | nickjunior | ניק ג'וניור · Nick Junior · yes 85 | yes | 2026-11-28 22:10 | 6 |
-| now14 | עכשיו 14 · Now 14 · ערוץ 14 · yes 14 | freetv | 2026-11-29 22:10 | 7 |
-| one | ערוץ One · One · ONE 1 · yes 50 | freetv | 2026-11-29 22:00 | 7 |
-| one2 | ערוץ One 2 · One 2 · yes 49 | freetv | 2026-11-29 22:00 | 7 |
-| onedoco | One Doco · yes 502 | freetv | 2026-12-02 22:00 | 10 |
-| oneedge | One Edge · yes 501 | freetv | 2026-12-02 22:00 | 10 |
-| reshet13 | רשת 13 · Reshet 13 · ערוץ 13 · yes 13 · yes 313 | freetv | 2026-11-29 22:00 | 7 |
+| now14 | עכשיו 14 · Now 14 · ערוץ 14 · yes 14 | cellcom | 2026-11-29 22:10 | 7 |
+| one | ערוץ One · One · ONE 1 · yes 50 | cellcom | 2026-11-29 21:59 | 7 |
+| one2 | ערוץ One 2 · One 2 · yes 49 | cellcom | 2026-11-29 21:59 | 7 |
+| onedoco | One Doco · yes 502 | cellcom | 2026-12-02 21:59 | 10 |
+| oneedge | One Edge · yes 501 | yes | 2026-11-28 22:44 | 6 |
+| reshet13 | רשת 13 · Reshet 13 · ערוץ 13 · רשת · yes 13 · yes 313 | cellcom | 2026-11-29 21:59 | 7 |
 | sport1 | ספורט 1 · Sport 1 Israel · yes 51 | cellcom | 2026-11-25 21:59 | 3 |
 | sport2 | ספורט 2 · Sport 2 Israel · yes 52 | cellcom | 2026-11-25 21:59 | 3 |
 | sport3 | ספורט 3 · Sport 3 Israel · yes 53 | cellcom | 2026-11-25 21:59 | 3 |
 | sport4 | ספורט 4 · Sport 4 Israel · yes 54 | cellcom | 2026-11-25 21:59 | 3 |
-| sport5 | ספורט 5 · Sport 5 · SPORT5 · yes 55 | freetv | 2026-11-29 22:00 | 7 |
-| sport54k | ספורט 5 4K · Sport 5 4K · yes 560 | freetv | 2026-11-29 22:00 | 7 |
-| sport5gold | ספורט 5 גולד · Sport 5 Gold · yes 57 | freetv | 2026-11-29 22:00 | 7 |
-| sport5live | ספורט 5 לייב · Sport 5 Live · yes 58 | freetv | 2026-11-29 22:00 | 7 |
-| sport5max | ספורט 5 מקס · Sport 5 MAX · yes 60 | freetv | 2026-11-29 22:00 | 7 |
-| sport5plus | ספורט 5 פלוס · Sport 5 Plus · yes 56 | freetv | 2026-11-29 22:00 | 7 |
-| sport5stars | ספורט 5 סטארס · Sport 5 Stars · yes 59 | freetv | 2026-11-29 22:00 | 7 |
+| sport5 | ספורט 5 · Sport 5 · yes 55 | cellcom | 2026-11-29 21:59 | 7 |
+| sport54k | ספורט 5 4K · Sport 5 4K · yes 560 | cellcom | 2026-11-29 21:59 | 7 |
+| sport5gold | ספורט 5 גולד · Sport 5 Gold · yes 57 | cellcom | 2026-11-29 21:59 | 7 |
+| sport5live | ספורט 5 לייב · Sport 5 Live · yes 58 | cellcom | 2026-11-29 21:59 | 7 |
+| sport5max | ספורט 5 מקס · Sport 5 MAX · yes 60 | cellcom | 2026-11-29 21:59 | 7 |
+| sport5plus | ספורט 5 פלוס · Sport 5 Plus · yes 56 | cellcom | 2026-11-29 21:59 | 7 |
+| sport5stars | ספורט 5 סטארס · Sport 5 Stars · yes 59 | cellcom | 2026-11-29 21:59 | 7 |
 | sport6 | ספורט 6 · Sport 6 Israel · yes 64 | cellcom | 2026-11-25 21:59 | 3 |
 | teennick | טין ניק · TeenNick · yes 94 | yes | 2026-11-28 22:08 | 6 |
-| travel | ערוץ הטיולים · Travel Channel · yes 72 | yes | 2026-11-28 04:00 | 5 |
-| viva | ערוץ ויוה · Viva · ערוץ ויוה שידור חי | epgshare | 2026-11-24 00:16 | 1 |
-| vivapremium | ויוה פרימיום · Viva Premium | epgshare | 2026-11-24 05:33 | 1 |
-| x. | Время | cellcom | 2026-11-30 21:59 | 8 |
-| x.+סלקוםactionmovies | +סלקום ACTION MOVIES | cellcom | 2026-11-26 13:14 | 4 |
-| x.+סלקוםcomedymovies | +סלקום COMEDY MOVIES | cellcom | 2026-11-26 15:17 | 4 |
-| x.+סלקוםdramamovies | +סלקום DRAMA MOVIES | cellcom | 2026-11-26 15:08 | 4 |
-| x.+סלקוםfamilymovies | +סלקום FAMILY MOVIES | cellcom | 2026-11-26 13:39 | 4 |
+| travel | ערוץ הטיולים · Travel Channel · yes 72 | yes | 2026-11-28 22:59 | 6 |
+| viva | ערוץ ויוה · Viva · ערוץ ויוה שידור חי | epgshare | 2026-11-25 00:16 | 2 |
+| vivapremium | ויוה פרימיום · Viva Premium | epgshare | 2026-11-25 05:34 | 2 |
+| x. | Карусель | cellcom | 2026-11-30 22:30 | 8 |
+| x.+סלקוםactionmovies | +סלקום ACTION MOVIES | cellcom | 2026-11-26 13:14 | 3 |
+| x.+סלקוםcomedymovies | +סלקום COMEDY MOVIES | cellcom | 2026-11-26 15:17 | 3 |
+| x.+סלקוםdramamovies | +סלקום DRAMA MOVIES | cellcom | 2026-11-26 15:08 | 3 |
+| x.+סלקוםfamilymovies | +סלקום FAMILY MOVIES | cellcom | 2026-11-26 13:39 | 3 |
 | x.1+1 | 1+1 · yes 196 | cellcom | 2026-11-30 21:59 | 8 |
 | x.102תלאביב | 102 תל-אביב | cellcom | 2026-11-29 22:00 | 7 |
 | x.24 | Россия 24 | cellcom | 2026-11-29 22:00 | 7 |
 | x.8tv | 8TV | cellcom | 2026-11-29 22:50 | 7 |
 | x.animalplanet | animal planet · yes 47 | cellcom | 2026-12-07 21:59 | 15 |
-| x.aplus | A Plus | freetv | 2026-11-26 22:00 | 4 |
 | x.arte | ARTE · yes 133 | yes | 2026-11-28 22:50 | 6 |
-| x.beautyz | Beautyz · yes 76 | freetv | 2026-11-29 22:00 | 7 |
+| x.beautyz | Beautyz · yes 76 | yes | 2026-11-28 22:13 | 6 |
 | x.bloomberg | Bloomberg · yes 106 | yes | 2026-11-28 22:00 | 6 |
 | x.bober | Бобёр - bober · yes 188 | cellcom | 2026-11-30 21:59 | 8 |
 | x.bollywoodmovies | Bollywood Movies · yes 114 | yes | 2026-11-28 23:30 | 6 |
@@ -110,7 +98,7 @@
 | x.childrenchannel | Children channel (RGE) · yes 87 | yes | 2026-11-28 22:00 | 6 |
 | x.classica | Classica HD · yes 207 | yes | 2026-11-28 22:08 | 6 |
 | x.classiccomedies | Classic Comedies · yes 29 | yes | 2026-11-28 22:19 | 6 |
-| x.cnn | CNN · yes 102 | yes | 2026-11-27 22:00 | 5 |
+| x.cnn | CNN · yes 102 | yes | 2026-11-28 22:00 | 6 |
 | x.ctc | CTC · yes 191 | yes | 2026-11-28 23:15 | 6 |
 | x.dailydrama | Daily Drama · yes 75 | yes | 2026-11-28 22:25 | 6 |
 | x.designchannel | Design Channel (DIY) · yes 66 | yes | 2026-11-28 22:12 | 6 |
@@ -120,17 +108,15 @@
 | x.eco99fm | Eco99FM | cellcom | 2026-11-29 22:00 | 7 |
 | x.economics10 | Economics 10 · yes 10 | yes | 2026-11-28 22:30 | 6 |
 | x.eurostar | EUROSTAR · yes 146 | yes | 2026-11-28 22:00 | 6 |
-| x.fomo | FOMO | freetv | 2026-11-29 22:00 | 7 |
+| x.fomo | FOMO | cellcom | 2026-11-29 21:59 | 7 |
 | x.foodnetwork | Food Network | cellcom | 2026-11-30 21:59 | 8 |
 | x.foxnews | Fox News · yes 105 | yes | 2026-11-28 22:00 | 6 |
 | x.france2 | France 2 (F2) · yes 132 | yes | 2026-11-28 22:25 | 6 |
-| x.france24 | FRANCE 24 · yes 104 | yes | 2026-11-27 22:00 | 5 |
-| x.france24fr | France 24 fr · yes 107 | yes | 2026-11-27 22:00 | 5 |
+| x.france24 | FRANCE 24 · yes 104 | yes | 2026-11-28 22:00 | 6 |
+| x.france24fr | France 24 fr · yes 107 | yes | 2026-11-28 22:00 | 6 |
 | x.france3 | FRANCE3 · yes 131 | yes | 2026-11-28 23:15 | 6 |
-| x.freetvסדרותקומדיה2 | FreeTV סדרות קומדיה 2 | freetv | 2026-12-07 23:08 | 15 |
-| x.freetvסרטיםפילגוד | FreeTV סרטים פיל גוד | freetv | 2026-12-05 04:05 | 12 |
 | x.friday | !FRIDAY | cellcom | 2026-11-29 22:30 | 7 |
-| x.gbnews | GBNews | cellcom | 2026-12-08 09:30 | 16 |
+| x.gbnews | GBNews | cellcom | 2026-12-08 21:00 | 16 |
 | x.goodlife+ | GOOD LIFE+ | cellcom | 2026-11-29 21:59 | 7 |
 | x.greekmusic | Greek music (MAD World) · yes 210 | yes | 2026-11-28 22:00 | 6 |
 | x.halatv | HALA TV (Ben) · yes 141 | yes | 2026-11-28 22:00 | 6 |
@@ -144,7 +130,7 @@
 | x.iltv | ILTV | cellcom | 2026-11-29 22:00 | 7 |
 | x.indiandrama1 | Indian Drama 1 · yes 112 | yes | 2026-11-29 00:14 | 6 |
 | x.indiandrama2 | Indian Drama 2 · yes 113 | yes | 2026-11-28 22:16 | 6 |
-| x.israelidrama | Israeli Drama · yes 30 | yes | 2026-11-27 04:27 | 4 |
+| x.israelidrama | Israeli Drama · yes 30 | yes | 2026-11-28 22:20 | 6 |
 | x.israelistage | Israeli Stage · yes 201 | yes | 2026-11-29 00:00 | 6 |
 | x.jimjam | JimJam · yes 148 | yes | 2026-11-28 22:03 | 6 |
 | x.jimjamrus | JimJam RUS · yes 223 | yes | 2026-11-28 22:03 | 6 |
@@ -159,20 +145,20 @@
 | x.mediterraneanmovies1 | Mediterranean movies 1 · yes 111 | yes | 2026-11-28 23:43 | 6 |
 | x.mediterraneanmovies2 | Mediterranean movies 2 · yes 109 | yes | 2026-11-28 23:36 | 6 |
 | x.mediterraneanplus | Mediterranean Plus · yes 32 | yes | 2026-11-28 22:21 | 6 |
-| x.metv | METV · yes 126 | yes | 2026-11-27 03:31 | 4 |
+| x.metv | METV · yes 126 | yes | 2026-11-28 22:00 | 6 |
 | x.mezzo | MEZZO · yes 208 | yes | 2026-11-28 22:25 | 6 |
 | x.mezzolive | MEZZO Live · yes 209 | yes | 2026-11-28 23:00 | 6 |
 | x.motorvision | Motorvision · yes 63 | yes | 2026-11-28 22:00 | 6 |
 | x.mtv00s | MTV 00s (VH1) · yes 202 | yes | 2026-11-28 22:00 | 6 |
 | x.mtvhits | MTV HITS · yes 206 | yes | 2026-11-28 22:00 | 6 |
-| x.mtvseries | MTV SERIES · yes 203 | yes | 2026-11-27 04:10 | 4 |
-| x.musicboxmuzon | Music Box Muzon (Rus MusicBox) · yes 213 | yes | 2026-11-27 06:00 | 4 |
-| x.musicil | Music IL · yes 200 | freetv | 2026-12-07 23:30 | 15 |
+| x.mtvseries | MTV SERIES · yes 203 | yes | 2026-11-28 22:05 | 6 |
+| x.musicboxmuzon | Music Box Muzon (Rus MusicBox) · yes 213 | yes | 2026-11-29 00:00 | 6 |
+| x.musicil | Music IL · yes 200 | yes | 2026-11-28 22:00 | 6 |
 | x.muzon | MUZON | cellcom | 2026-11-30 00:00 | 7 |
 | x.nashekino | NASHE KINO · yes 184 | yes | 2026-11-28 23:15 | 6 |
 | x.nationalg | National G. HD IP Only · yes 41 | yes | 2026-11-28 22:09 | 6 |
 | x.nationalgwild | National G. Wild HD · yes 43 | yes | 2026-11-28 22:10 | 6 |
-| x.newsmax | NEWSMAX · yes 101 | cellcom | 2026-11-30 21:59 | 8 |
+| x.newsmax | NEWSMAX · yes 101 | cellcom | 2026-11-30 22:00 | 8 |
 | x.ntvmir | NTV MIR · yes 192 | cellcom | 2026-11-30 21:59 | 8 |
 | x.o | !O | cellcom | 2026-11-29 23:00 | 7 |
 | x.perviikanal | Первый канал - pervii kanal | cellcom | 2026-11-30 21:59 | 8 |
@@ -185,7 +171,7 @@
 | x.rtm | RTM · yes 147 | yes | 2026-11-28 22:00 | 6 |
 | x.rtr | РТР-Планета - RTR · yes 182 | cellcom | 2026-11-30 21:59 | 8 |
 | x.rtvi | RTVi | cellcom | 2026-12-07 21:59 | 15 |
-| x.sat1 | SAT 1 · yes 122 | yes | 2026-11-27 22:00 | 5 |
+| x.sat1 | SAT 1 · yes 122 | yes | 2026-11-29 00:10 | 6 |
 | x.shansontv | SHANSON.TV · yes 198 | cellcom | 2026-11-30 21:59 | 8 |
 | x.skynews | Sky News · yes 103 | yes | 2026-11-28 22:00 | 6 |
 | x.spanishdrama1 | Spanish Drama 1 · yes 39 | yes | 2026-11-28 22:07 | 6 |
@@ -207,7 +193,7 @@
 | x.vivalovestory | Viva Love Story (Viva Premium) · yes 34 | yes | 2026-11-27 02:55 | 4 |
 | x.vivatelenovelas | Viva Telenovelas (Viva) · yes 35 | yes | 2026-11-28 22:07 | 6 |
 | x.vivavintage | Viva Vintage · yes 37 | yes | 2026-11-27 04:49 | 4 |
-| x.vox | VOX · yes 121 | yes | 2026-11-27 04:30 | 4 |
+| x.vox | VOX · yes 121 | yes | 2026-11-28 23:15 | 6 |
 | x.vremya | VREMYA · yes 186 | yes | 2026-11-28 23:40 | 6 |
 | x.wiz | WiZ · yes 92 | yes | 2026-11-29 00:27 | 6 |
 | x.worldaction1 | World Action 1 · yes 46 | yes | 2026-11-28 22:15 | 6 |
@@ -222,15 +208,14 @@
 | x.בית+ | בית + | cellcom | 2026-11-29 21:59 | 7 |
 | x.גלגלצ | גלגל"צ | cellcom | 2026-11-29 22:00 | 7 |
 | x.גלצ | גל"צ | cellcom | 2026-11-29 22:00 | 7 |
-| x.וואמוס | וואמוס | freetv | 2026-11-29 22:00 | 7 |
 | x.ויוהאיסטנבול | ויוה איסטנבול | cellcom | 2026-12-04 21:59 | 12 |
 | x.ויוהוינטג | ויוה וינטג' | cellcom | 2026-11-27 21:59 | 5 |
 | x.ויוהטלנובלות | ויוה טלנובלות | cellcom | 2026-12-04 21:59 | 12 |
 | x.ויוהסיפוראהבה | ויוה סיפור אהבה | cellcom | 2026-11-27 21:59 | 5 |
 | x.ילדותי | ילדותי | cellcom | 2026-12-06 21:59 | 14 |
-| x.יםתיכוני | ים תיכוני | cellcom | 2026-11-29 21:59 | 7 |
-| x.יםתיכוני+ | ים תיכוני + | cellcom | 2026-11-29 21:59 | 7 |
-| x.יםתיכוני2 | ים תיכוני 2 | cellcom | 2026-11-29 21:59 | 7 |
+| x.יםתיכוני | ים תיכוני | cellcom | 2026-12-06 21:59 | 14 |
+| x.יםתיכוני+ | ים תיכוני + | cellcom | 2026-12-06 21:59 | 14 |
+| x.יםתיכוני2 | ים תיכוני 2 | cellcom | 2026-12-06 21:59 | 14 |
 | x.כאן88 | כאן 88 | cellcom | 2026-11-29 22:00 | 7 |
 | x.כאןב | כאן ב' | cellcom | 2026-11-29 22:00 | 7 |
 | x.כאןג | כאן ג' | cellcom | 2026-11-29 22:00 | 7 |
@@ -239,35 +224,28 @@
 | x.כאןרקע | כאן רקע | cellcom | 2026-11-29 22:00 | 7 |
 | x.כאןתרבות | כאן תרבות | cellcom | 2026-11-29 22:00 | 7 |
 | x.כחוליוון | כחול יוון | cellcom | 2026-11-29 22:00 | 7 |
-| x.לוגי | לוגי | freetv | 2026-11-29 22:00 | 7 |
-| x.מוזיקהil | מוזיקה il | cellcom | 2026-12-08 09:30 | 16 |
-| x.סלקום+דוקו | סלקום+ דוקו | cellcom | 2026-11-27 17:40 | 5 |
-| x.סלקום+סדרות | סלקום+ סדרות | cellcom | 2026-11-27 12:05 | 5 |
-| x.סלקום+קידס | סלקום+ קידס | cellcom | 2026-11-26 10:14 | 4 |
-| x.סלקוםactionmovies | סלקום ACTION MOVIES | cellcom | 2026-11-26 13:14 | 4 |
-| x.סלקוםcomedymovies | סלקום COMEDY MOVIES | cellcom | 2026-11-26 15:17 | 4 |
-| x.סלקוםdramamovies | סלקום DRAMA MOVIES | cellcom | 2026-11-26 15:08 | 4 |
-| x.סלקוםfamilymovies | סלקום FAMILY MOVIES | cellcom | 2026-11-26 13:39 | 4 |
-| x.סלקוםדוקו | סלקום דוקו | cellcom | 2026-11-27 17:40 | 5 |
-| x.סלקוםסדרות | סלקום סדרות | cellcom | 2026-11-27 12:05 | 5 |
-| x.סלקוםקידס | סלקום קידס | cellcom | 2026-11-26 10:14 | 4 |
-| x.סרטיםfreetv10stars | סרטים FreeTV 10 STARS | freetv | 2026-12-05 04:46 | 12 |
+| x.לוגי | לוגי | cellcom | 2026-11-29 21:59 | 7 |
+| x.מוזיקהil | מוזיקה il | cellcom | 2026-12-08 21:00 | 16 |
+| x.סלקום+דוקו | סלקום+ דוקו | cellcom | 2026-11-27 17:40 | 4 |
+| x.סלקום+סדרות | סלקום+ סדרות | cellcom | 2026-11-27 12:05 | 4 |
+| x.סלקום+קידס | סלקום+ קידס | cellcom | 2026-11-26 10:14 | 3 |
+| x.סלקוםactionmovies | סלקום ACTION MOVIES | cellcom | 2026-11-26 13:14 | 3 |
+| x.סלקוםcomedymovies | סלקום COMEDY MOVIES | cellcom | 2026-11-26 15:17 | 3 |
+| x.סלקוםdramamovies | סלקום DRAMA MOVIES | cellcom | 2026-11-26 15:08 | 3 |
+| x.סלקוםfamilymovies | סלקום FAMILY MOVIES | cellcom | 2026-11-26 13:39 | 3 |
+| x.סלקוםדוקו | סלקום דוקו | cellcom | 2026-11-27 17:40 | 4 |
+| x.סלקוםסדרות | סלקום סדרות | cellcom | 2026-11-27 12:05 | 4 |
+| x.סלקוםקידס | סלקום קידס | cellcom | 2026-11-26 10:14 | 3 |
 | x.עושיםחדשות16 | עושים חדשות 16 | cellcom | 2026-11-29 21:59 | 7 |
-| x.ערוץ11כבדישמיעה | ערוץ 11 - כבדי שמיעה | freetv | 2026-12-04 22:00 | 12 |
-| x.ערוץ12כבדישמיעה | ערוץ 12 - כבדי שמיעה | freetv | 2026-11-29 22:00 | 7 |
-| x.ערוץ13כבדישמיעה | ערוץ 13 - כבדי שמיעה | freetv | 2026-11-29 22:00 | 7 |
-| x.ערוץ14כבדישמיעה | ערוץ 14 - כבדי שמיעה | freetv | 2026-11-30 22:10 | 8 |
-| x.ערוץ24צרפת | ערוץ 24 צרפת | freetv | 2026-11-28 22:00 | 6 |
-| x.ערוץ3 | ערוץ 3 שידור חי | epgshare | 2026-11-24 00:11 | 1 |
-| x.ערוץ8 | ערוץ 8 שידור חי | epgshare | 2026-11-23 00:00 | 0 |
-| x.ערוץארץנהדרת | ערוץ ארץ נהדרת | freetv | 2026-12-05 04:19 | 12 |
+| x.ערוץ3 | ערוץ 3 שידור חי | epgshare | 2026-11-25 00:11 | 2 |
+| x.ערוץ8 | ערוץ 8 שידור חי | epgshare | 2026-11-25 00:00 | 2 |
 | x.ערוץדוקופשע | ערוץ דוקו פשע | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהאהבה | ערוץ האהבה | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהאקשןהעולמי1 | ערוץ האקשן העולמי 1 | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהאקשןהעולמי2 | ערוץ האקשן העולמי 2 | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהדרמותההודיות1 | ערוץ הדרמות ההודיות 1 | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהדרמותההודיות2 | ערוץ הדרמות ההודיות 2 | cellcom | 2026-11-29 21:59 | 7 |
-| x.ערוץהדרמותהטורקיות+ | ערוץ הדרמות הטורקיות + | cellcom | 2026-11-29 21:59 | 7 |
+| x.ערוץהדרמותהטורקיות+ | ערוץ הדרמות הטורקיות + | cellcom | 2026-12-06 21:59 | 14 |
 | x.ערוץהדרמותהטורקיות2 | ערוץ הדרמות הטורקיות 2 | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהדרמותהטורקיות3 | ערוץ הדרמות הטורקיות 3 | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהדרמותהיומיות | ערוץ הדרמות היומיות | cellcom | 2026-12-06 21:59 | 14 |
@@ -277,14 +255,12 @@
 | x.ערוץההומור | ערוץ ההומור | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץההומור2 | ערוץ ההומור 2 | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץההיסטוריה | ערוץ ההיסטוריה | cellcom | 2026-11-29 22:16 | 7 |
-| x.ערוץהטבע | ערוץ הטבע | freetv | 2026-12-07 23:46 | 15 |
 | x.ערוץהידברות | ערוץ הידברות | cellcom | 2026-11-29 22:00 | 7 |
-| x.ערוץהילדים | ערוץ הילדים | freetv | 2026-11-29 22:00 | 7 |
-| x.ערוץהכוכבים | ערוץ הכוכבים | freetv | 2026-11-29 22:00 | 7 |
+| x.ערוץהילדים | ערוץ הילדים | cellcom | 2026-11-29 21:59 | 7 |
+| x.ערוץהכוכבים | ערוץ הכוכבים | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהכלכלה | ערוץ הכלכלה | cellcom | 2026-11-29 21:59 | 7 |
-| x.ערוץהמוזיקה | ערוץ המוזיקה | freetv | 2026-12-05 05:26 | 12 |
 | x.ערוץהמוסיקההיוונית | ערוץ המוסיקה היוונית | cellcom | 2026-11-29 22:00 | 7 |
-| x.ערוץהנופש | ערוץ הנופש | cellcom | 2026-11-29 21:59 | 7 |
+| x.ערוץהנופש | ערוץ הנופש | cellcom | 2026-12-06 21:59 | 14 |
 | x.ערוץהסרטיםהיםתיכוני1 | ערוץ הסרטים הים תיכוני 1 | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהסרטיםהיםתיכוני2 | ערוץ הסרטים הים תיכוני 2 | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהקולנועהישראלי | ערוץ הקולנוע הישראלי | cellcom | 2026-11-29 21:59 | 7 |
@@ -292,9 +268,6 @@
 | x.ערוץהקריוקי | ערוץ הקריוקי | cellcom | 2026-11-29 22:00 | 7 |
 | x.ערוץהריאליטי | ערוץ הריאליטי | cellcom | 2026-11-29 21:59 | 7 |
 | x.ערוץהשעשועונים | ערוץ השעשועונים | cellcom | 2026-11-29 21:59 | 7 |
-| x.ערוץסברימרנן | ערוץ סברי מרנן | freetv | 2026-12-07 22:59 | 15 |
-| x.ערוץרוקדיםעםכוכבים | ערוץ רוקדים עם כוכבים | freetv | 2026-12-04 04:52 | 11 |
-| x.פלא | פלא | freetv | 2026-12-07 23:02 | 15 |
 | x.שיריילדותי | שירי ילדותי | cellcom | 2026-11-29 21:59 | 7 |
 | yesdocu | yes דוקו · yes Docu · yes Docu HD · yes 8 | yes | 2026-11-28 23:30 | 6 |
 | yesisraelicinema | yes קולנוע ישראלי · yes Israeli Cinema · yes Israeli Cinema HD IP only · yes 4 | yes | 2026-11-28 22:09 | 6 |
@@ -304,5 +277,5 @@
 | yesmovieskids | yes סרטים ילדים · yes Movies Kids · yes 77 | yes | 2026-11-28 22:20 | 6 |
 | yestvaction | yes TV אקשן · yes TV Action · yes 19 | yes | 2026-11-28 22:27 | 6 |
 | yestvcomedy | yes TV קומדיה · yes TV Comedy · yes 20 | yes | 2026-11-28 22:15 | 6 |
-| yestvdrama | yes TV דרמה · yes TV Drama · yes 18 | yes | 2026-11-28 22:18 | 6 |
-| yoyo | יויו · Yoyo · yes 78 | freetv | 2026-11-29 22:00 | 7 |
+| yestvdrama | yes TV דרמה · yes TV Drama · yes 18 | yes | 2026-11-28 22:20 | 6 |
+| yoyo | יויו · Yoyo · yes 78 | cellcom | 2026-11-29 21:59 | 7 |
